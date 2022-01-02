@@ -1,17 +1,17 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "maartenpaauw/laravel-specification-pattern",
+    "description": "This is my package laravel-specification-pattern",
     "keywords": [
-        ":vendor_name",
+        "maartenpaauw",
         "laravel",
-        ":package_slug"
+        "laravel-specification-pattern"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/maartenpaauw/laravel-specification-pattern",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Maarten Paauw",
+            "email": "maartenpaauw@gmail.com",
             "role": "Developer"
         }
     ],
@@ -34,13 +34,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Maartenpaauw\\LaravelSpecificationPattern\\": "src",
+            "Maartenpaauw\\LaravelSpecificationPattern\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Maartenpaauw\\LaravelSpecificationPattern\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -49,15 +49,19 @@
         "test-coverage": "vendor/bin/pest coverage"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Maartenpaauw\\LaravelSpecificationPattern\\LaravelSpecificationPatternServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "LaravelSpecificationPattern": "Maartenpaauw\\LaravelSpecificationPattern\\Facades\\LaravelSpecificationPattern"
             }
         }
     },
