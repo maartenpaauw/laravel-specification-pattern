@@ -3,8 +3,8 @@
 namespace Maartenpaauw\Specifications\Tests;
 
 use Illuminate\Config\Repository;
-use Orchestra\Testbench\TestCase as Orchestra;
 use Maartenpaauw\Specifications\SpecificationsServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {

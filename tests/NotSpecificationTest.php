@@ -9,7 +9,7 @@ use Maartenpaauw\Specifications\Tests\Dummy\UppercaseSpecification;
 
 class NotSpecificationTest extends TestCase
 {
-    /** @var NotSpecification<string>  */
+    /** @var NotSpecification<string> */
     private NotSpecification $specification;
 
     protected function setUp(): void
