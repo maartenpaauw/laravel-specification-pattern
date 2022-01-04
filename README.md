@@ -52,7 +52,7 @@ return [
 ## Usage
 
 ```php
-$laravel-specification-pattern = new Maartenpaauw\LaravelSpecificationPattern();
+$laravel-specification-pattern = new Maartenpaauw\Specifications();
 echo $laravel-specification-pattern->echoPhrase('Hello, Maartenpaauw!');
 ```
 

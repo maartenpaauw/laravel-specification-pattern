@@ -34,13 +34,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Maartenpaauw\\LaravelSpecificationPattern\\": "src",
-            "Maartenpaauw\\LaravelSpecificationPattern\\Database\\Factories\\": "database/factories"
+            "Maartenpaauw\\Specifications\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Maartenpaauw\\LaravelSpecificationPattern\\Tests\\": "tests"
+            "Maartenpaauw\\Specifications\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -58,11 +57,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Maartenpaauw\\LaravelSpecificationPattern\\LaravelSpecificationPatternServiceProvider"
-            ],
-            "aliases": {
-                "LaravelSpecificationPattern": "Maartenpaauw\\LaravelSpecificationPattern\\Facades\\LaravelSpecificationPattern"
-            }
+                "Maartenpaauw\\Specifications\\SpecificationsServiceProvider"
+            ]
         }
     },
     "minimum-stability": "dev",
