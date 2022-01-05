@@ -7,15 +7,15 @@ namespace Maartenpaauw\Specifications\Tests\Dummy;
 use Maartenpaauw\Specifications\CompositeSpecification;
 
 /**
- * @extends CompositeSpecification<bool>
+ * @extends CompositeSpecification<mixed>
  */
-class BooleanSpecification extends CompositeSpecification
+class NegativeSpecification extends CompositeSpecification
 {
     /**
      * @inheritDoc
      */
     public function isSatisfiedBy(mixed $candidate): bool
     {
-        return $candidate;
+        return false;
     }
 }
