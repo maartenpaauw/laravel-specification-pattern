@@ -10,8 +10,23 @@ namespace Maartenpaauw\Specifications;
  */
 abstract class CompositeSpecification implements Specification
 {
+    /**
+     * @return CompositeSpecification<TCandidate>
+     */
     public function not(): CompositeSpecification
     {
         return new NotSpecification($this);
+    }
+
+    /**
+     * @param Specification<TCandidate> $specification
+     * @return CompositeSpecification<TCandidate>
+     */
+    public function and(Specification $specification): CompositeSpecification
+    {
+        return new AndSpecification([
+            $this,
+            $specification,
+        ]);
     }
 }
