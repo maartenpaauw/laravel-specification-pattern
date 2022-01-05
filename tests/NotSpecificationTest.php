@@ -22,7 +22,7 @@ class NotSpecificationTest extends TestCase
     }
 
     /** @test */
-    public function is_should_return_false_when_the_given_specification_is_satisfied(): void
+    public function it_should_return_false_when_the_given_specification_is_satisfied(): void
     {
         // Act
         $satisfied = $this->specification->isSatisfiedBy('HELLO WORLD!');
@@ -32,7 +32,7 @@ class NotSpecificationTest extends TestCase
     }
 
     /** @test */
-    public function is_should_return_true_when_the_given_specification_is_dissatisfied(): void
+    public function it_should_return_true_when_the_given_specification_is_dissatisfied(): void
     {
         // Act
         $satisfied = $this->specification->isSatisfiedBy('hello world!');

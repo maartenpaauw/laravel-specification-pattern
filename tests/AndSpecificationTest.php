@@ -26,7 +26,7 @@ class AndSpecificationTest extends TestCase
     }
 
     /** @test */
-    public function is_should_return_true_when_the_candidate_matches_all_specifications(): void
+    public function it_should_return_true_when_the_candidate_matches_all_specifications(): void
     {
         // Act
         $satisfied = $this->specification->isSatisfiedBy('HELLO WORLD!');
@@ -36,7 +36,7 @@ class AndSpecificationTest extends TestCase
     }
 
     /** @test */
-    public function is_should_return_false_when_the_candidate_does_not_match_any_specification(): void
+    public function it_should_return_false_when_the_candidate_does_not_match_any_specification(): void
     {
         // Act
         $satisfied = $this->specification->isSatisfiedBy('hello world');
@@ -46,7 +46,7 @@ class AndSpecificationTest extends TestCase
     }
 
     /** @test */
-    public function is_should_return_false_when_the_candidate_matches_one_of_the_specifications(): void
+    public function it_should_return_false_when_the_candidate_matches_one_of_the_specifications(): void
     {
         // Act
         $satisfied = $this->specification->isSatisfiedBy('hello world!');
