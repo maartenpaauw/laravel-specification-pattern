@@ -20,6 +20,20 @@ abstract class CompositeSpecification implements Specification
 
     /**
      * @param Specification<TCandidate> $specification
+     *
+     * @return CompositeSpecification<TCandidate>
+     */
+    public function or(Specification $specification): CompositeSpecification
+    {
+        return new OrSpecification([
+            $this,
+            $specification,
+        ]);
+    }
+
+    /**
+     * @param Specification<TCandidate> $specification
+     *
      * @return CompositeSpecification<TCandidate>
      */
     public function and(Specification $specification): CompositeSpecification
