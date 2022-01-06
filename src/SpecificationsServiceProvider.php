@@ -20,8 +20,14 @@ class SpecificationsServiceProvider extends PackageServiceProvider
             ->hasCommand(MakeSpecificationCommand::class);
     }
 
-    public function registeringPackage(): void
+    public function packageRegistered(): void
     {
-        Collection::macro('matching', app(MatchingMacro::class)());
+        /** @var string $name */
+        $name = config('specification-pattern.collection-method', 'matching');
+
+        Collection::macro(
+            $name,
+            app(MatchingMacro::class)(),
+        );
     }
 }
