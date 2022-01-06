@@ -7,7 +7,7 @@ namespace {{ namespace }};
 use Maartenpaauw\Specifications\Specification;
 
 /**
- * @implements Specification<mixed>
+ * @implements Specification<{{ candidate }}>
  */
 class {{ class }} implements Specification
 {

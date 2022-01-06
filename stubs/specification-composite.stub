@@ -7,7 +7,7 @@ namespace {{ namespace }};
 use Maartenpaauw\Specifications\CompositeSpecification;
 
 /**
- * @extends CompositeSpecification<mixed>
+ * @extends CompositeSpecification<{{ candidate }}>
  */
 class {{ class }} extends CompositeSpecification
 {

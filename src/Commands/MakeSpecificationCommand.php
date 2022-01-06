@@ -29,17 +29,39 @@ class MakeSpecificationCommand extends GeneratorCommand
         return sprintf('%s\Specifications', $rootNamespace);
     }
 
+    protected function buildClass($name): string
+    {
+        $replacements = [
+            '{{ candidate }}' => $this->option('candidate'),
+        ];
+
+        return str_replace(
+            array_keys($replacements),
+            array_values($replacements),
+            parent::buildClass($name),
+        );
+    }
+
     protected function getOptions(): array
     {
         $composite = new InputOption(
             'composite',
-            'c',
+            null,
             InputOption::VALUE_NONE,
             'Indicates the specification should be composite',
         );
 
+        $candidate = new InputOption(
+            'candidate',
+            'c',
+            InputOption::VALUE_OPTIONAL,
+            'Specify the candidate type to use',
+            'mixed',
+        );
+
         return [
             $composite,
+            $candidate,
         ];
     }
 }
