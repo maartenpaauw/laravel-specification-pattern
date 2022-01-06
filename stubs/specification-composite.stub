@@ -1,0 +1,21 @@
+<?php
+
+declare(strict_types=1);
+
+namespace {{ namespace }};
+
+use Maartenpaauw\Specifications\CompositeSpecification;
+
+/**
+ * @extends CompositeSpecification<mixed>
+ */
+class {{ class }} extends CompositeSpecification
+{
+    /**
+     * @inheritDoc
+     */
+    public function isSatisfiedBy(mixed $candidate): bool
+    {
+        return true;
+    }
+}

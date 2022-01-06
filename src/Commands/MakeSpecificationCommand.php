@@ -4,18 +4,42 @@ declare(strict_types=1);
 
 namespace Maartenpaauw\Specifications\Commands;
 
-use Illuminate\Console\Command;
+use Illuminate\Console\GeneratorCommand;
+use Symfony\Component\Console\Input\InputOption;
 
-class MakeSpecificationCommand extends Command
+class MakeSpecificationCommand extends GeneratorCommand
 {
-    public $signature = 'make:specification';
+    public $name = 'make:specification';
 
-    public $description = 'Creates a specification';
+    public $description = 'Create a new specification class';
 
-    public function handle(): int
+    protected $type = 'Specification';
+
+    protected function getStub(): string
     {
-        $this->comment('All done');
+        if ($this->option('composite')) {
+            return __DIR__ . '/../../stubs/specification-composite.stub';
+        }
 
-        return self::SUCCESS;
+        return __DIR__ . '/../../stubs/specification.stub';
+    }
+
+    protected function getDefaultNamespace($rootNamespace): string
+    {
+        return sprintf('%s\Specifications', $rootNamespace);
+    }
+
+    protected function getOptions(): array
+    {
+        $composite = new InputOption(
+            'composite',
+            'c',
+            InputOption::VALUE_NONE,
+            'Indicates the specification should be composite',
+        );
+
+        return [
+            $composite,
+        ];
     }
 }
