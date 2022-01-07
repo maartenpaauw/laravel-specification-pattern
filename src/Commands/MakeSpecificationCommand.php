@@ -18,10 +18,10 @@ class MakeSpecificationCommand extends GeneratorCommand
     protected function getStub(): string
     {
         if ($this->option('composite')) {
-            return __DIR__ . '/../../stubs/specification-composite.stub';
+            return $this->resolveStubPath('/stubs/specification-composite.stub');
         }
 
-        return __DIR__ . '/../../stubs/specification.stub';
+        return $this->resolveStubPath('/stubs/specification.stub');
     }
 
     protected function getDefaultNamespace($rootNamespace): string
@@ -63,5 +63,13 @@ class MakeSpecificationCommand extends GeneratorCommand
             $composite,
             $candidate,
         ];
+    }
+
+    protected function resolveStubPath(string $stub): string
+    {
+        $custom = $this->laravel->basePath(trim($stub, '/'));
+        $default = __DIR__ . $stub;
+
+        return file_exists($custom) ? $custom : $default;
     }
 }

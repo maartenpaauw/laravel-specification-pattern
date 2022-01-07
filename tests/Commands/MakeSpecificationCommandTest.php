@@ -8,7 +8,6 @@ use Illuminate\Testing\PendingCommand;
 use Maartenpaauw\Specifications\Commands\MakeSpecificationCommand;
 use Maartenpaauw\Specifications\Tests\TestCase;
 use Spatie\Snapshots\MatchesSnapshots;
-use Symfony\Component\Console\Command\Command;
 
 class MakeSpecificationCommandTest extends TestCase
 {
@@ -17,21 +16,26 @@ class MakeSpecificationCommandTest extends TestCase
     /** @test */
     public function it_should_be_possible_to_create_a_basic_specification_class(): void
     {
-        // Act
+        // Arrange
         /** @var PendingCommand $command */
         $command = $this->artisan(MakeSpecificationCommand::class, [
             'name' => 'MyBasicSpecification',
         ]);
 
         // Assert
-        $command->assertExitCode(Command::SUCCESS);
+        $command->assertSuccessful();
+
+        // Act
+        $command->execute();
+
+        // Assert
         $this->assertSpecificationMatchesSnapshot('MyBasicSpecification');
     }
 
     /** @test */
     public function it_should_be_possible_to_create_a_composite_specification_class(): void
     {
-        // Act
+        // Arrange
         /** @var PendingCommand $command */
         $command = $this->artisan(MakeSpecificationCommand::class, [
             'name' => 'MyCompositeSpecification',
@@ -39,14 +43,19 @@ class MakeSpecificationCommandTest extends TestCase
         ]);
 
         // Assert
-        $command->assertExitCode(Command::SUCCESS);
+        $command->assertSuccessful();
+
+        // Act
+        $command->execute();
+
+        // Assert
         $this->assertSpecificationMatchesSnapshot('MyCompositeSpecification');
     }
 
     /** @test */
     public function it_should_be_possible_to_create_a_basic_specification_with_a_candidate_type(): void
     {
-        // Act
+        // Arrange
         /** @var PendingCommand $command */
         $command = $this->artisan(MakeSpecificationCommand::class, [
             'name' => 'MyStrictBasicSpecification',
@@ -54,14 +63,19 @@ class MakeSpecificationCommandTest extends TestCase
         ]);
 
         // Assert
-        $command->assertExitCode(Command::SUCCESS);
+        $command->assertSuccessful();
+
+        // Act
+        $command->execute();
+
+        // Assert
         $this->assertSpecificationMatchesSnapshot('MyStrictBasicSpecification');
     }
 
     /** @test */
     public function it_should_be_possible_to_create_a_composite_specification_with_a_candidate_type(): void
     {
-        // Act
+        // Arrange
         /** @var PendingCommand $command */
         $command = $this->artisan(MakeSpecificationCommand::class, [
             'name' => 'MyStrictCompositeSpecification',
@@ -70,7 +84,12 @@ class MakeSpecificationCommandTest extends TestCase
         ]);
 
         // Assert
-        $command->assertExitCode(Command::SUCCESS);
+        $command->assertSuccessful();
+
+        // Act
+        $command->execute();
+
+        // Assert
         $this->assertSpecificationMatchesSnapshot('MyStrictCompositeSpecification');
     }
 
