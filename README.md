@@ -31,9 +31,76 @@ return [
 
 ## Usage
 
+Here's how you can create a specification:
+
+```shell
+php artisan make:specification AdultSpecification
+```
+
+This will generate a specification class within the `App\Specifications` namespace.
+
 ```php
-$laravel-specification-pattern = new Maartenpaauw\Specifications();
-echo $laravel-specification-pattern->echoPhrase('Hello, Maartenpaauw!');
+<?php
+
+namespace App\Specifications;
+
+use Maartenpaauw\Specifications\Specification;
+
+/**
+ * @implements  Specification<mixed>
+ */
+class AdultSpecification implements Specification
+{
+    public function isSatisfiedBy(mixed $candidate): bool
+    {
+        return $candidate->age >= 18;
+    }
+}
+```
+
+After implementing the business logic, you can use it in various ways.
+
+imagine we have the following class which represents a person with a given age.
+
+```php
+class Person {
+    public function __construct(public int $age)
+    {}
+}
+```
+
+Now we can use the specification by **directly** calling the `isSatisfiedBy` method
+or **indirectly** be filtering an eloquent collection by calling the `matching` method.
+
+### Direct
+
+```php
+$specification = new AdultSpecification();
+
+// ...
+
+$specification->isSatisfiedBy(new Person(16)); // false
+$specification->isSatisfiedBy(new Person(32)); // true
+```
+
+### Indirect
+
+```php
+$persons = collect([
+    new Person(10),
+    new Person(17),
+    new Person(18),
+    new Person(32),
+]);
+
+// ...
+
+// Returns a collection with persons matching the specification
+$persons = $persons->matching(new AdultSpecification());
+
+// ...
+
+$persons->count(); // 2
 ```
 
 ## Testing
