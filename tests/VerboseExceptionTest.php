@@ -55,4 +55,17 @@ class VerboseExceptionTest extends TestCase
         // Assert
         $this->assertTrue($satisfied);
     }
+
+    /** @test */
+    public function it_should_be_possible_to_receive_the_message(): void
+    {
+        // Arrange
+        $specification = $this->specification->withMessage('This is the reason why it is dissatisfied.');
+
+        // Act
+        $message = $specification->message();
+
+        // Assert
+        $this->assertEquals('This is the reason why it is dissatisfied.', $message);
+    }
 }

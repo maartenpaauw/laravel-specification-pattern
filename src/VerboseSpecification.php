@@ -30,6 +30,11 @@ class VerboseSpecification extends CompositeSpecification
         );
     }
 
+    public function message(): string
+    {
+        return $this->message;
+    }
+
     /**
      * @param TCandidate $candidate
      *
