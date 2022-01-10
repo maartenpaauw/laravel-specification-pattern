@@ -11,16 +11,10 @@ namespace Maartenpaauw\Specifications;
 class OrSpecification extends CompositeSpecification
 {
     /**
-     * @var array<Specification<TCandidate>>
-     */
-    private array $specifications;
-
-    /**
      * @param array<Specification<TCandidate>> $specifications
      */
-    public function __construct(array $specifications)
+    public function __construct(private array $specifications)
     {
-        $this->specifications = $specifications;
     }
 
     /**

@@ -10,6 +10,9 @@ namespace Maartenpaauw\Specifications;
  */
 class VerboseSpecification extends CompositeSpecification
 {
+    /**
+     * @param Specification<TCandidate> $origin
+     */
     public function __construct(
         private Specification $origin,
         private string $message = '',
