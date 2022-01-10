@@ -6,6 +6,7 @@ namespace Maartenpaauw\Specifications;
 
 use Illuminate\Support\Collection;
 use Maartenpaauw\Specifications\Commands\MakeSpecificationCommand;
+use Maartenpaauw\Specifications\Laravel\CollectionMatchingMacro;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -22,12 +23,12 @@ class SpecificationsServiceProvider extends PackageServiceProvider
 
     public function packageRegistered(): void
     {
-        /** @var string $name */
-        $name = config('specification-pattern.collection-method', 'matching');
+        /** @var string $method */
+        $method = config('specification-pattern.collection-method', 'matching');
 
         Collection::macro(
-            $name,
-            app(MatchingMacro::class)(),
+            $method,
+            app(CollectionMatchingMacro::class)(),
         );
     }
 }

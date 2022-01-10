@@ -2,15 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Maartenpaauw\Specifications;
+namespace Maartenpaauw\Specifications\Laravel;
 
 use Closure;
 use Illuminate\Support\Collection;
+use Maartenpaauw\Specifications\Specification;
 
 /**
  * @mixin Collection
  */
-class MatchingMacro
+class CollectionMatchingMacro
 {
     public function __invoke(): Closure
     {
