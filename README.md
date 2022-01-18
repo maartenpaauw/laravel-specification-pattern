@@ -51,16 +51,17 @@ use Maartenpaauw\Specifications\Specification;
  */
 class AdultSpecification implements Specification
 {
+    /**
+     * @inheritDoc
+     */
     public function isSatisfiedBy(mixed $candidate): bool
     {
-        return $candidate->age >= 18;
+        return true;
     }
 }
 ```
 
-After implementing the business logic, you can use it in various ways.
-
-imagine we have the following class which represents a person with a given age.
+Imagine we have the following class which represents a person with a given age.
 
 ```php
 class Person {
@@ -69,8 +70,34 @@ class Person {
 }
 ```
 
-Now we can use the specification by **directly** calling the `isSatisfiedBy` method
-or **indirectly** be filtering an eloquent collection by calling the `matching` method.
+Let's apply the business logic:
+
+```diff
+<?php
+
+namespace App\Specifications;
+
+use Maartenpaauw\Specifications\Specification;
+
+/**
+- * @implements  Specification<mixed>
++ * @implements  Specification<Person>
+ */
+class AdultSpecification implements Specification
+{
+    /**
+     * @inheritDoc
+     */
+    public function isSatisfiedBy(mixed $candidate): bool
+    {
+-        return true;
++        return $candidate->age >= 18;
+    }
+}
+```
+
+After applying the bussiness logic we can use the specification by **directly** calling the `isSatisfiedBy`
+method or **indirectly** be filtering an eloquent collection by calling the `matching` method.
 
 ### Direct
 
