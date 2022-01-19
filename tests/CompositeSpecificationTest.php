@@ -44,7 +44,7 @@ class CompositeSpecificationTest extends TestCase
     }
 
     /** @test */
-    public function it_should_return_true_when_chaining_a_satisied_and_a_dissatisfied_or_specification(): void
+    public function it_should_return_true_when_chaining_a_satisfied_and_a_dissatisfied_or_specification(): void
     {
         // Act
         $satisfied = $this->specification
@@ -70,13 +70,37 @@ class CompositeSpecificationTest extends TestCase
     }
 
     /** @test */
-    public function it_should_return_true_when_chaining_multiple_satisied_and_specifications(): void
+    public function it_should_be_possible_to_chain_the_or_not_specification(): void
+    {
+        // Act
+        $satisfied = (new NegativeSpecification())
+            ->orNot(new NegativeSpecification())
+            ->isSatisfiedBy(null);
+
+        // Assert
+        $this->assertTrue($satisfied);
+    }
+
+    /** @test */
+    public function it_should_return_true_when_chaining_multiple_satisfied_and_specifications(): void
     {
         // Act
         $satisfied = $this->specification
             ->and(new PositiveSpecification())
             ->and(new PositiveSpecification())
             ->and(new PositiveSpecification())
+            ->isSatisfiedBy(null);
+
+        // Assert
+        $this->assertTrue($satisfied);
+    }
+
+    /** @test */
+    public function it_should_be_possible_to_chain_the_and_not_specification(): void
+    {
+        // Act
+        $satisfied = $this->specification
+            ->andNot(new NegativeSpecification())
             ->isSatisfiedBy(null);
 
         // Assert

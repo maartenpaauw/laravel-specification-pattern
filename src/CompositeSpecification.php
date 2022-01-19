@@ -36,11 +36,31 @@ abstract class CompositeSpecification implements Specification
      *
      * @return CompositeSpecification<TCandidate>
      */
+    public function orNot(Specification $specification): CompositeSpecification
+    {
+        return $this->or(new NotSpecification($specification));
+    }
+
+    /**
+     * @param Specification<TCandidate> $specification
+     *
+     * @return CompositeSpecification<TCandidate>
+     */
     public function and(Specification $specification): CompositeSpecification
     {
         return new AndSpecification([
             $this,
             $specification,
         ]);
+    }
+
+    /**
+     * @param Specification<TCandidate> $specification
+     *
+     * @return CompositeSpecification<TCandidate>
+     */
+    public function andNot(Specification $specification): CompositeSpecification
+    {
+        return $this->and(new NotSpecification($specification));
     }
 }
