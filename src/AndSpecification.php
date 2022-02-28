@@ -13,8 +13,9 @@ class AndSpecification extends CompositeSpecification
     /**
      * @param array<Specification<TCandidate>> $specifications
      */
-    public function __construct(private array $specifications)
-    {
+    public function __construct(
+        private array $specifications,
+    ) {
     }
 
     /**
