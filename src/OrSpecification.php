@@ -8,7 +8,7 @@ namespace Maartenpaauw\Specifications;
  * @template TCandidate
  * @extends CompositeSpecification<TCandidate>
  */
-class OrSpecification extends CompositeSpecification
+final class OrSpecification extends CompositeSpecification
 {
     /**
      * @param array<Specification<TCandidate>> $specifications
