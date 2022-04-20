@@ -11,8 +11,9 @@ use Maartenpaauw\Specifications\CompositeSpecification;
  */
 class LengthSpecification extends CompositeSpecification
 {
-    public function __construct(private int $length)
-    {
+    public function __construct(
+        private int $length,
+    ) {
     }
 
     /**
