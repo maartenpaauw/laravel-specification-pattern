@@ -2,6 +2,16 @@
 
 All notable changes to `laravel-specification-pattern` will be documented in this file.
 
+## Unreleased
+
+### Changed
+
+- Marked the following classes as final:
+  - `AndSpecification`.
+  - `NotSpecification`.
+  - `OrSpecification`.
+  - `VerboseSpecification`.
+
 ## [v1.1.0] - 2022-03-07
 
 ### Added

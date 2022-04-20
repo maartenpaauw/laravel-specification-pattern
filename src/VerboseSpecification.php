@@ -8,7 +8,7 @@ namespace Maartenpaauw\Specifications;
  * @template TCandidate
  * @extends CompositeSpecification<TCandidate>
  */
-class VerboseSpecification extends CompositeSpecification
+final class VerboseSpecification extends CompositeSpecification
 {
     /**
      * @param Specification<TCandidate> $origin
