@@ -11,14 +11,16 @@ use Maartenpaauw\Specifications\Specification;
 /**
  * @mixin Collection
  */
-class CollectionMatchingMacro
+final class CollectionMatchingMacro
 {
     public function __invoke(): Closure
     {
         return function (Specification $specification) {
-            return $this->filter(static function ($candidate) use ($specification): bool {
-                return $specification->isSatisfiedBy($candidate);
-            });
+            return $this->filter(
+                static function ($candidate) use ($specification): bool {
+                    return $specification->isSatisfiedBy($candidate);
+                },
+            );
         };
     }
 }

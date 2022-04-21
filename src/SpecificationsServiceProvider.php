@@ -10,7 +10,7 @@ use Maartenpaauw\Specifications\Laravel\CollectionMatchingMacro;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
-class SpecificationsServiceProvider extends PackageServiceProvider
+final class SpecificationsServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {

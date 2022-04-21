@@ -6,6 +6,7 @@ namespace Maartenpaauw\Specifications;
 
 /**
  * @template TCandidate
+ *
  * @extends CompositeSpecification<TCandidate>
  */
 final class VerboseSpecification extends CompositeSpecification

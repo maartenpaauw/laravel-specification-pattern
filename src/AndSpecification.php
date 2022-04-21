@@ -6,6 +6,7 @@ namespace Maartenpaauw\Specifications;
 
 /**
  * @template TCandidate
+ *
  * @extends CompositeSpecification<TCandidate>
  */
 final class AndSpecification extends CompositeSpecification
@@ -18,9 +19,6 @@ final class AndSpecification extends CompositeSpecification
     ) {
     }
 
-    /**
-     * @inheritDoc
-     */
     public function isSatisfiedBy(mixed $candidate): bool
     {
         foreach ($this->specifications as $specification) {
