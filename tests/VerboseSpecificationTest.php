@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Maartenpaauw\Specifications\Tests;
 
-use Maartenpaauw\Specifications\SpecificationException;
+use Maartenpaauw\Specifications\DissatisfiedSpecification;
 use Maartenpaauw\Specifications\Tests\Dummy\LengthSpecification;
 use Maartenpaauw\Specifications\VerboseSpecification;
 
-class VerboseExceptionTest extends TestCase
+class VerboseSpecificationTest extends TestCase
 {
     /** @var VerboseSpecification<string> */
     private VerboseSpecification $specification;
@@ -26,7 +26,7 @@ class VerboseExceptionTest extends TestCase
     public function it_should_throw_an_exception_with_an_empty_message_when_the_specification_is_not_satisfied(): void
     {
         // Assert
-        $this->expectException(SpecificationException::class);
+        $this->expectException(DissatisfiedSpecification::class);
         $this->expectExceptionMessage('');
 
         // Act
@@ -37,7 +37,7 @@ class VerboseExceptionTest extends TestCase
     public function it_should_be_possible_to_customize_the_exception_message(): void
     {
         // Assert
-        $this->expectException(SpecificationException::class);
+        $this->expectException(DissatisfiedSpecification::class);
         $this->expectExceptionMessage('The given string is longer than 12 characters!');
 
         // Act

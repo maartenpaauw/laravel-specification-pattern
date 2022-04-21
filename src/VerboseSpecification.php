@@ -39,7 +39,7 @@ final class VerboseSpecification extends CompositeSpecification
     /**
      * @param TCandidate $candidate
      *
-     * @throws SpecificationException
+     * @throws DissatisfiedSpecification
      */
     public function isSatisfiedBy(mixed $candidate): bool
     {
@@ -47,6 +47,6 @@ final class VerboseSpecification extends CompositeSpecification
             return true;
         }
 
-        throw new SpecificationException($this->message);
+        throw new DissatisfiedSpecification($this->message);
     }
 }

@@ -6,6 +6,7 @@ All notable changes to `laravel-specification-pattern` will be documented in thi
 
 ### Changed
 
+- Renamed `SpecificationException` to `DissatisfiedSpecification`.
 - Marked the following classes as final:
   - `AndSpecification`.
   - `NotSpecification`.

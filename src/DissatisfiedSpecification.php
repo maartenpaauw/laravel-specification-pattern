@@ -6,6 +6,6 @@ namespace Maartenpaauw\Specifications;
 
 use Exception;
 
-class SpecificationException extends Exception
+final class DissatisfiedSpecification extends Exception
 {
 }
