@@ -9,7 +9,10 @@ use Illuminate\Support\Collection;
 use Maartenpaauw\Specifications\Specification;
 
 /**
- * @mixin Collection
+ * @template TKey of array-key
+ * @template TValue
+ *
+ * @mixin Collection<TKey, TValue>
  */
 final class CollectionMatchingMacro
 {
