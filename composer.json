@@ -18,7 +18,7 @@
     "require": {
         "php": "^8.0",
         "spatie/laravel-package-tools": "^1.9.2",
-        "illuminate/contracts": "^8.83|^9.2"
+        "illuminate/contracts": "^8.83|^9.2|^10.4"
     },
     "require-dev": {
         "nunomaduro/collision": "^5.11|^6.1",
