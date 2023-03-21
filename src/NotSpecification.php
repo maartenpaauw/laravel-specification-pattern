@@ -6,9 +6,10 @@ namespace Maartenpaauw\Specifications;
 
 /**
  * @template TCandidate
+ *
  * @extends CompositeSpecification<TCandidate>
  */
-class NotSpecification extends CompositeSpecification
+final class NotSpecification extends CompositeSpecification
 {
     /**
      * @param Specification<TCandidate> $specification
@@ -18,9 +19,6 @@ class NotSpecification extends CompositeSpecification
     ) {
     }
 
-    /**
-     * @inheritDoc
-     */
     public function isSatisfiedBy(mixed $candidate): bool
     {
         return ! $this->specification->isSatisfiedBy($candidate);

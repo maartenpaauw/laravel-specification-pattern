@@ -6,6 +6,7 @@ namespace Maartenpaauw\Specifications;
 
 /**
  * @template TCandidate
+ *
  * @implements Specification<TCandidate>
  */
 abstract class CompositeSpecification implements Specification

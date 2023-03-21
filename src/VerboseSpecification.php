@@ -6,9 +6,10 @@ namespace Maartenpaauw\Specifications;
 
 /**
  * @template TCandidate
+ *
  * @extends CompositeSpecification<TCandidate>
  */
-class VerboseSpecification extends CompositeSpecification
+final class VerboseSpecification extends CompositeSpecification
 {
     /**
      * @param Specification<TCandidate> $origin
@@ -38,7 +39,7 @@ class VerboseSpecification extends CompositeSpecification
     /**
      * @param TCandidate $candidate
      *
-     * @throws SpecificationException
+     * @throws DissatisfiedSpecification
      */
     public function isSatisfiedBy(mixed $candidate): bool
     {
@@ -46,6 +47,6 @@ class VerboseSpecification extends CompositeSpecification
             return true;
         }
 
-        throw new SpecificationException($this->message);
+        throw new DissatisfiedSpecification($this->message);
     }
 }

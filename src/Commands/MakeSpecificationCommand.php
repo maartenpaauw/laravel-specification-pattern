@@ -7,28 +7,47 @@ namespace Maartenpaauw\Specifications\Commands;
 use Illuminate\Console\GeneratorCommand;
 use Symfony\Component\Console\Input\InputOption;
 
-class MakeSpecificationCommand extends GeneratorCommand
+final class MakeSpecificationCommand extends GeneratorCommand
 {
-    public $name = 'make:specification';
+    /**
+     * @var string
+     */
+    protected $name = 'make:specification';
 
-    public $description = 'Create a new specification class';
+    /**
+     * @var string
+     */
+    protected $description = 'Create a new specification class';
 
+    /**
+     * @var string
+     */
     protected $type = 'Specification';
 
     protected function getStub(): string
     {
         if ($this->option('composite')) {
-            return $this->resolveStubPath('/stubs/specification-composite.stub');
+            return $this->resolveStubPath(
+                '/stubs/specification-composite.stub',
+            );
         }
 
-        return $this->resolveStubPath('/stubs/specification.stub');
+        return $this->resolveStubPath(
+            '/stubs/specification.stub',
+        );
     }
 
+    /**
+     * @inheritDoc
+     */
     protected function getDefaultNamespace($rootNamespace): string
     {
         return sprintf('%s\Specifications', $rootNamespace);
     }
 
+    /**
+     * @inheritDoc
+     */
     protected function buildClass($name): string
     {
         $replacements = [
@@ -42,6 +61,9 @@ class MakeSpecificationCommand extends GeneratorCommand
         );
     }
 
+    /**
+     * @return array<int, InputOption>
+     */
     protected function getOptions(): array
     {
         $composite = new InputOption(

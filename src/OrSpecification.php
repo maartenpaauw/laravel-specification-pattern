@@ -6,21 +6,19 @@ namespace Maartenpaauw\Specifications;
 
 /**
  * @template TCandidate
+ *
  * @extends CompositeSpecification<TCandidate>
  */
-class OrSpecification extends CompositeSpecification
+final class OrSpecification extends CompositeSpecification
 {
     /**
-     * @param array<Specification<TCandidate>> $specifications
+     * @param array<array-key, Specification<TCandidate>> $specifications
      */
     public function __construct(
         private array $specifications,
     ) {
     }
 
-    /**
-     * @inheritDoc
-     */
     public function isSatisfiedBy(mixed $candidate): bool
     {
         foreach ($this->specifications as $specification) {
