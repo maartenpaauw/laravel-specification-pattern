@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Maartenpaauw\Specifications;
 
-use Exception;
+use DomainException;
 
-final class DissatisfiedSpecification extends Exception
+final class DissatisfiedSpecification extends DomainException
 {
 }
