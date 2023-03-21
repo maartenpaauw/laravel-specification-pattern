@@ -12,7 +12,7 @@ namespace Maartenpaauw\Specifications;
 final class AndSpecification extends CompositeSpecification
 {
     /**
-     * @param array<Specification<TCandidate>> $specifications
+     * @param array<array-key, Specification<TCandidate>> $specifications
      */
     public function __construct(
         private array $specifications,
