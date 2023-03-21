@@ -1,8 +1,8 @@
 # Laravel specification pattern
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/maartenpaauw/laravel-specification-pattern.svg?style=flat-square)](https://packagist.org/packages/maartenpaauw/laravel-specification-pattern)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/maartenpaauw/laravel-specification-pattern/run-tests?label=tests)](https://github.com/maartenpaauw/laravel-specification-pattern/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/maartenpaauw/laravel-specification-pattern/Check%20&%20fix%20styling?label=code%20style)](https://github.com/maartenpaauw/laravel-specification-pattern/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/maartenpaauw/laravel-specification-pattern/run-tests.yml?label=tests)](https://github.com/maartenpaauw/laravel-specification-pattern/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/maartenpaauw/laravel-specification-pattern/php-cs-fixer.yml?label=code%20style)](https://github.com/maartenpaauw/laravel-specification-pattern/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
 [![Codecov](https://codecov.io/gh/maartenpaauw/laravel-specification-pattern/branch/develop/graph/badge.svg?token=YM9A0DUA4R)](https://codecov.io/gh/maartenpaauw/laravel-specification-pattern)
 [![Total Downloads](https://img.shields.io/packagist/dt/maartenpaauw/laravel-specification-pattern.svg?style=flat-square)](https://packagist.org/packages/maartenpaauw/laravel-specification-pattern)
 
