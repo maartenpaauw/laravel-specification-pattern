@@ -12,10 +12,10 @@ namespace Maartenpaauw\Specifications;
 final class OrSpecification extends CompositeSpecification
 {
     /**
-     * @param array<array-key, Specification<TCandidate>> $specifications
+     * @param  array<array-key, Specification<TCandidate>>  $specifications
      */
     public function __construct(
-        private array $specifications,
+        private readonly array $specifications,
     ) {
     }
 

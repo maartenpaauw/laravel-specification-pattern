@@ -12,7 +12,7 @@ use Maartenpaauw\Specifications\CompositeSpecification;
 class MyStrictCompositeSpecification extends CompositeSpecification
 {
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function isSatisfiedBy(mixed $candidate): bool
     {

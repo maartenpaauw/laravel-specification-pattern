@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Maartenpaauw\Specifications\Tests;
 
-use Maartenpaauw\Specifications\Tests\Dummy\NegativeSpecification;
-use Maartenpaauw\Specifications\Tests\Dummy\PositiveSpecification;
+use Workbench\App\NegativeSpecification;
+use Workbench\App\PositiveSpecification;
 
 class CompositeSpecificationTest extends TestCase
 {

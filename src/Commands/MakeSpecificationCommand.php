@@ -38,7 +38,7 @@ final class MakeSpecificationCommand extends GeneratorCommand
     }
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     protected function getDefaultNamespace($rootNamespace): string
     {
@@ -46,7 +46,7 @@ final class MakeSpecificationCommand extends GeneratorCommand
     }
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     protected function buildClass($name): string
     {

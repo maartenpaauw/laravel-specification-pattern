@@ -12,7 +12,7 @@ use Maartenpaauw\Specifications\Specification;
 class MyBasicSpecification implements Specification
 {
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function isSatisfiedBy(mixed $candidate): bool
     {

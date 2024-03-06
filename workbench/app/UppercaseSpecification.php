@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Maartenpaauw\Specifications\Tests\Dummy;
+namespace Workbench\App;
 
 use Maartenpaauw\Specifications\CompositeSpecification;
 
@@ -12,7 +12,7 @@ use Maartenpaauw\Specifications\CompositeSpecification;
 class UppercaseSpecification extends CompositeSpecification
 {
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function isSatisfiedBy(mixed $candidate): bool
     {
