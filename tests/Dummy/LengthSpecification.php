@@ -17,7 +17,7 @@ class LengthSpecification extends CompositeSpecification
     }
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function isSatisfiedBy(mixed $candidate): bool
     {

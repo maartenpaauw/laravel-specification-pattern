@@ -12,7 +12,7 @@ namespace Maartenpaauw\Specifications;
 final class NotSpecification extends CompositeSpecification
 {
     /**
-     * @param Specification<TCandidate> $specification
+     * @param  Specification<TCandidate>  $specification
      */
     public function __construct(
         private Specification $specification,

@@ -53,7 +53,7 @@ use Maartenpaauw\Specifications\Specification;
 class AdultSpecification implements Specification
 {
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function isSatisfiedBy(mixed $candidate): bool
     {
@@ -87,7 +87,7 @@ use Maartenpaauw\Specifications\Specification;
 class AdultSpecification implements Specification
 {
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function isSatisfiedBy(mixed $candidate): bool
     {

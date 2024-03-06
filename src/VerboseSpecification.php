@@ -12,7 +12,7 @@ namespace Maartenpaauw\Specifications;
 final class VerboseSpecification extends CompositeSpecification
 {
     /**
-     * @param Specification<TCandidate> $origin
+     * @param  Specification<TCandidate>  $origin
      */
     public function __construct(
         private Specification $origin,
@@ -37,7 +37,7 @@ final class VerboseSpecification extends CompositeSpecification
     }
 
     /**
-     * @param TCandidate $candidate
+     * @param  TCandidate  $candidate
      *
      * @throws DissatisfiedSpecification
      */

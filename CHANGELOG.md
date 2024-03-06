@@ -2,11 +2,22 @@
 
 All notable changes to `laravel-specification-pattern` will be documented in this file.
 
+## Unreleased
+
+### Added
+
+- Support for PHP 8.3.
+
+### Removed
+
+- Support for Laravel 9.
+- Support for PHP 8.0.
+
 ## [v2.0.0] - 2023-03-21
 
 ### Added
 
-- Support from Laravel 10.
+- Support for Laravel 10.
 
 ### Changed
 
