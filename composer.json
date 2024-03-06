@@ -41,7 +41,8 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Maartenpaauw\\Specifications\\Tests\\": "tests"
+            "Maartenpaauw\\Specifications\\Tests\\": "tests",
+            "Workbench\\App\\": "workbench/app"
         }
     },
     "scripts": {

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Maartenpaauw\Specifications\Tests\Dummy;
+namespace Maartenpaauw\Specifications\Tests;
 
-use Maartenpaauw\Specifications\Tests\TestCase;
+use Workbench\App\LengthSpecification;
 
 class LengthSpecificationTest extends TestCase
 {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Maartenpaauw\Specifications\Tests\Dummy;
+namespace Workbench\App;
 
 use Maartenpaauw\Specifications\CompositeSpecification;
 
