@@ -15,8 +15,8 @@ final class VerboseSpecification extends CompositeSpecification
      * @param  Specification<TCandidate>  $origin
      */
     public function __construct(
-        private Specification $origin,
-        private string $message = '',
+        private readonly Specification $origin,
+        private readonly string $message = '',
     ) {
     }
 

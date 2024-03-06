@@ -15,7 +15,7 @@ final class NotSpecification extends CompositeSpecification
      * @param  Specification<TCandidate>  $specification
      */
     public function __construct(
-        private Specification $specification,
+        private readonly Specification $specification,
     ) {
     }
 
