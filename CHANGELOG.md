@@ -2,7 +2,7 @@
 
 All notable changes to `laravel-specification-pattern` will be documented in this file.
 
-## Unreleased
+## [v2.1.0] - 2024-03-08
 
 ### Added
 
@@ -43,6 +43,7 @@ All notable changes to `laravel-specification-pattern` will be documented in thi
 
 - initial release
 
+[v2.1.0]: https://github.com/maartenpaauw/laravel-specification-pattern/compare/v2.0.0...v2.1.0
 [v2.0.0]: https://github.com/maartenpaauw/laravel-specification-pattern/compare/v1.1.0...v2.0.0
 [v1.1.0]: https://github.com/maartenpaauw/laravel-specification-pattern/compare/v1.0.0...v1.1.0
 [v1.0.0]: https://github.com/maartenpaauw/laravel-specification-pattern/releases/tag/v1.0.0
