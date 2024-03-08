@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Maartenpaauw\Specifications\Tests;
 
 use Maartenpaauw\Specifications\NotSpecification;
-use Maartenpaauw\Specifications\Tests\Dummy\UppercaseSpecification;
+use Workbench\App\UppercaseSpecification;
 
 class NotSpecificationTest extends TestCase
 {

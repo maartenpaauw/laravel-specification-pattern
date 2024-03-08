@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Maartenpaauw\Specifications\Tests;
 
 use Illuminate\Support\Collection;
-use Maartenpaauw\Specifications\Tests\Dummy\UppercaseSpecification;
+use Workbench\App\UppercaseSpecification;
 
 class CollectionTest extends TestCase
 {

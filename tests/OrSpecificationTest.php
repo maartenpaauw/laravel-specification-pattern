@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Maartenpaauw\Specifications\Tests;
 
 use Maartenpaauw\Specifications\OrSpecification;
-use Maartenpaauw\Specifications\Tests\Dummy\LengthSpecification;
-use Maartenpaauw\Specifications\Tests\Dummy\UppercaseSpecification;
+use Workbench\App\LengthSpecification;
+use Workbench\App\UppercaseSpecification;
 
 class OrSpecificationTest extends TestCase
 {

@@ -20,8 +20,7 @@ abstract class CompositeSpecification implements Specification
     }
 
     /**
-     * @param Specification<TCandidate> $specification
-     *
+     * @param  Specification<TCandidate>  $specification
      * @return CompositeSpecification<TCandidate>
      */
     public function or(Specification $specification): CompositeSpecification
@@ -33,8 +32,7 @@ abstract class CompositeSpecification implements Specification
     }
 
     /**
-     * @param Specification<TCandidate> $specification
-     *
+     * @param  Specification<TCandidate>  $specification
      * @return CompositeSpecification<TCandidate>
      */
     public function orNot(Specification $specification): CompositeSpecification
@@ -43,8 +41,7 @@ abstract class CompositeSpecification implements Specification
     }
 
     /**
-     * @param Specification<TCandidate> $specification
-     *
+     * @param  Specification<TCandidate>  $specification
      * @return CompositeSpecification<TCandidate>
      */
     public function and(Specification $specification): CompositeSpecification
@@ -56,8 +53,7 @@ abstract class CompositeSpecification implements Specification
     }
 
     /**
-     * @param Specification<TCandidate> $specification
-     *
+     * @param  Specification<TCandidate>  $specification
      * @return CompositeSpecification<TCandidate>
      */
     public function andNot(Specification $specification): CompositeSpecification

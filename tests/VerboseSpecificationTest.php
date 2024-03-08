@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Maartenpaauw\Specifications\Tests;
 
 use Maartenpaauw\Specifications\DissatisfiedSpecification;
-use Maartenpaauw\Specifications\Tests\Dummy\LengthSpecification;
 use Maartenpaauw\Specifications\VerboseSpecification;
+use Workbench\App\LengthSpecification;
 
 class VerboseSpecificationTest extends TestCase
 {

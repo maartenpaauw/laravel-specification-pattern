@@ -10,7 +10,7 @@ namespace Maartenpaauw\Specifications;
 interface Specification
 {
     /**
-     * @param TCandidate $candidate
+     * @param  TCandidate  $candidate
      */
     public function isSatisfiedBy(mixed $candidate): bool;
 }
