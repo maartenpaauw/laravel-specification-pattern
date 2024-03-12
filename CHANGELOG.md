@@ -2,6 +2,12 @@
 
 All notable changes to `laravel-specification-pattern` will be documented in this file.
 
+## [v2.2.0] - 2024-03-13
+
+### Added
+
+- Support for Laravel 11.
+
 ## [v2.1.0] - 2024-03-08
 
 ### Added
