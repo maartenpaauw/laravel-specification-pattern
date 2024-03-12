@@ -17,12 +17,12 @@ class MakeSpecificationCommandTest extends TestCase
     public function it_should_be_possible_to_create_a_basic_specification_class(): void
     {
         // Arrange
-        /** @var PendingCommand $command */
         $command = $this->artisan(MakeSpecificationCommand::class, [
             'name' => 'MyBasicSpecification',
         ]);
 
         // Assert
+        self::assertInstanceOf(PendingCommand::class, $command);
         $command->assertSuccessful();
 
         // Act
@@ -36,13 +36,13 @@ class MakeSpecificationCommandTest extends TestCase
     public function it_should_be_possible_to_create_a_composite_specification_class(): void
     {
         // Arrange
-        /** @var PendingCommand $command */
         $command = $this->artisan(MakeSpecificationCommand::class, [
             'name' => 'MyCompositeSpecification',
             '--composite' => true,
         ]);
 
         // Assert
+        self::assertInstanceOf(PendingCommand::class, $command);
         $command->assertSuccessful();
 
         // Act
@@ -56,13 +56,13 @@ class MakeSpecificationCommandTest extends TestCase
     public function it_should_be_possible_to_create_a_basic_specification_with_a_candidate_type(): void
     {
         // Arrange
-        /** @var PendingCommand $command */
         $command = $this->artisan(MakeSpecificationCommand::class, [
             'name' => 'MyStrictBasicSpecification',
             '--candidate' => 'string',
         ]);
 
         // Assert
+        self::assertInstanceOf(PendingCommand::class, $command);
         $command->assertSuccessful();
 
         // Act
@@ -76,7 +76,6 @@ class MakeSpecificationCommandTest extends TestCase
     public function it_should_be_possible_to_create_a_composite_specification_with_a_candidate_type(): void
     {
         // Arrange
-        /** @var PendingCommand $command */
         $command = $this->artisan(MakeSpecificationCommand::class, [
             'name' => 'MyStrictCompositeSpecification',
             '--composite' => true,
@@ -84,6 +83,7 @@ class MakeSpecificationCommandTest extends TestCase
         ]);
 
         // Assert
+        self::assertInstanceOf(PendingCommand::class, $command);
         $command->assertSuccessful();
 
         // Act
