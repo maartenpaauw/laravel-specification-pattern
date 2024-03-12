@@ -2,10 +2,11 @@
 
 namespace Maartenpaauw\Specifications\Tests;
 
-use Illuminate\Config\Repository;
 use Maartenpaauw\Specifications\SpecificationsServiceProvider;
+use Orchestra\Testbench\Attributes\WithConfig;
 use Orchestra\Testbench\TestCase as Orchestra;
 
+#[WithConfig('database.default', 'testing')]
 class TestCase extends Orchestra
 {
     protected function getPackageProviders($app): array
@@ -13,13 +14,5 @@ class TestCase extends Orchestra
         return [
             SpecificationsServiceProvider::class,
         ];
-    }
-
-    public function getEnvironmentSetUp($app): void
-    {
-        /** @var Repository $config */
-        $config = config();
-
-        $config->set('database.default', 'testing');
     }
 }
