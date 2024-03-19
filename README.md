@@ -8,6 +8,18 @@
 
 Filter an Illuminate collection with specifications.
 
+## Support me
+
+<p class="filament-hidden">
+    <a href="https://filamentphp.com/plugins/maartenpaauw-pennant">
+        <img src="https://raw.githubusercontent.com/maartenpaauw/pennant-for-filament-docs/main/assets/screenshots/banner.jpg"
+            alt="Pennant for Filament"
+            width="700px" />
+    </a>
+</p>
+
+You can support me by [buying Pennant feature flags for Filament](https://filamentphp.com/plugins/maartenpaauw-pennant).
+
 ## Installation
 
 You can install the package via composer:
