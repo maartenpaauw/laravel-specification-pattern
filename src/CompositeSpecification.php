@@ -60,4 +60,12 @@ abstract class CompositeSpecification implements Specification
     {
         return $this->and(new NotSpecification($specification));
     }
+
+    /**
+     * @return CompositeSpecification<TCandidate>
+     */
+    public function verbose(string $message = ''): CompositeSpecification
+    {
+        return new VerboseSpecification($this, $message);
+    }
 }

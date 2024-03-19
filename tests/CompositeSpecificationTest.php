@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Maartenpaauw\Specifications\Tests;
 
+use Maartenpaauw\Specifications\VerboseSpecification;
 use Workbench\App\NegativeSpecification;
 use Workbench\App\PositiveSpecification;
 
@@ -105,5 +106,19 @@ class CompositeSpecificationTest extends TestCase
 
         // Assert
         $this->assertTrue($satisfied);
+    }
+
+    /**
+     * @test
+     */
+    public function it_should_make_the_specification_verbose(): void
+    {
+        // Act
+        $specification = $this->specification
+            ->verbose('The specification is not satisfied');
+
+        // Assert
+        $this->assertInstanceOf(VerboseSpecification::class, $specification);
+        $this->assertSame('The specification is not satisfied', $specification->message());
     }
 }
