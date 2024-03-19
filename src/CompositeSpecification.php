@@ -41,6 +41,24 @@ abstract class CompositeSpecification implements Specification
      * @param  Specification<TCandidate>  $specification
      * @return CompositeSpecification<TCandidate>
      */
+    public function xor(Specification $specification): CompositeSpecification
+    {
+        return new XorSpecification([$this, $specification]);
+    }
+
+    /**
+     * @param  Specification<TCandidate>  $specification
+     * @return CompositeSpecification<TCandidate>
+     */
+    public function xorNot(Specification $specification): CompositeSpecification
+    {
+        return $this->xor(new NotSpecification($specification));
+    }
+
+    /**
+     * @param  Specification<TCandidate>  $specification
+     * @return CompositeSpecification<TCandidate>
+     */
     public function and(Specification $specification): CompositeSpecification
     {
         return new AndSpecification([$this, $specification]);

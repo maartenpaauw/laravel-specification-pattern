@@ -83,6 +83,30 @@ class CompositeSpecificationTest extends TestCase
     }
 
     /** @test */
+    public function it_should_be_possible_to_chain_the_xor_specification(): void
+    {
+        // Act
+        $satisfied = $this->specification
+            ->xor(new NegativeSpecification())
+            ->isSatisfiedBy(null);
+
+        // Assert
+        $this->assertTrue($satisfied);
+    }
+
+    /** @test */
+    public function it_should_be_possible_to_chain_the_xor_not_specification(): void
+    {
+        // Act
+        $satisfied = $this->specification
+            ->xorNot(new NegativeSpecification())
+            ->isSatisfiedBy(null);
+
+        // Assert
+        $this->assertFalse($satisfied);
+    }
+
+    /** @test */
     public function it_should_return_true_when_chaining_multiple_satisfied_and_specifications(): void
     {
         // Act

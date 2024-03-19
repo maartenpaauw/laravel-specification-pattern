@@ -7,6 +7,7 @@ All notable changes to `laravel-specification-pattern` will be documented in thi
  ### Added
 
 - Ability to make specification verbose using composite specification.
+- Exclusive or specification.
 
 ## [v2.2.0] - 2024-03-13
 
