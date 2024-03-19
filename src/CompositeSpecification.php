@@ -25,10 +25,7 @@ abstract class CompositeSpecification implements Specification
      */
     public function or(Specification $specification): CompositeSpecification
     {
-        return new OrSpecification([
-            $this,
-            $specification,
-        ]);
+        return new OrSpecification([$this, $specification]);
     }
 
     /**
@@ -46,10 +43,7 @@ abstract class CompositeSpecification implements Specification
      */
     public function and(Specification $specification): CompositeSpecification
     {
-        return new AndSpecification([
-            $this,
-            $specification,
-        ]);
+        return new AndSpecification([$this, $specification]);
     }
 
     /**
