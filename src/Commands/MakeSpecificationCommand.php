@@ -40,7 +40,7 @@ final class MakeSpecificationCommand extends GeneratorCommand
     /**
      * {@inheritDoc}
      */
-    protected function getDefaultNamespace($rootNamespace): string
+    protected function getDefaultNamespace(mixed $rootNamespace): string
     {
         return sprintf('%s\Specifications', $rootNamespace);
     }
@@ -48,7 +48,7 @@ final class MakeSpecificationCommand extends GeneratorCommand
     /**
      * {@inheritDoc}
      */
-    protected function buildClass($name): string
+    protected function buildClass(mixed $name): string
     {
         $replacements = [
             '{{ candidate }}' => $this->option('candidate'),

@@ -20,7 +20,7 @@ final class CollectionMatchingMacro
     {
         return function (Specification $specification) {
             return $this->filter(
-                static function ($candidate) use ($specification): bool {
+                static function (mixed $candidate) use ($specification): bool {
                     return $specification->isSatisfiedBy($candidate);
                 },
             );
