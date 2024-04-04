@@ -9,7 +9,7 @@ use Orchestra\Testbench\TestCase as Orchestra;
 #[WithConfig('database.default', 'testing')]
 class TestCase extends Orchestra
 {
-    protected function getPackageProviders($app): array
+    protected function getPackageProviders(mixed $app): array
     {
         return [
             SpecificationsServiceProvider::class,
