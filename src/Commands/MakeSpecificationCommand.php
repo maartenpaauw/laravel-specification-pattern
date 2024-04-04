@@ -5,20 +5,15 @@ declare(strict_types=1);
 namespace Maartenpaauw\Specifications\Commands;
 
 use Illuminate\Console\GeneratorCommand;
+use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Input\InputOption;
 
+#[AsCommand(
+    'make:specification',
+    'Create a new specification class',
+)]
 final class MakeSpecificationCommand extends GeneratorCommand
 {
-    /**
-     * @var string
-     */
-    protected $name = 'make:specification';
-
-    /**
-     * @var string
-     */
-    protected $description = 'Create a new specification class';
-
     /**
      * @var string
      */
