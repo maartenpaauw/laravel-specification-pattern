@@ -20,6 +20,6 @@ final class LengthSpecification extends CompositeSpecification
      */
     public function isSatisfiedBy(mixed $candidate): bool
     {
-        return \mb_strlen($candidate) === $this->length;
+        return mb_strlen($candidate) === $this->length;
     }
 }

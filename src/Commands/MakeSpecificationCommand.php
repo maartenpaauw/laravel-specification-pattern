@@ -14,10 +14,7 @@ use Symfony\Component\Console\Input\InputOption;
 )]
 final class MakeSpecificationCommand extends GeneratorCommand
 {
-    /**
-     * @var string
-     */
-    protected $type = 'Specification';
+    protected string $type = 'Specification';
 
     protected function getStub(): string
     {
