@@ -9,18 +9,17 @@ use Maartenpaauw\Specifications\CompositeSpecification;
 /**
  * @extends CompositeSpecification<string>
  */
-class LengthSpecification extends CompositeSpecification
+final class LengthSpecification extends CompositeSpecification
 {
     public function __construct(
         private readonly int $length,
-    ) {
-    }
+    ) {}
 
     /**
-     * {@inheritDoc}
+     * @inheritDoc
      */
     public function isSatisfiedBy(mixed $candidate): bool
     {
-        return strlen($candidate) === $this->length;
+        return \mb_strlen($candidate) === $this->length;
     }
 }

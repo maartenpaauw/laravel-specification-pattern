@@ -9,13 +9,13 @@ use Maartenpaauw\Specifications\CompositeSpecification;
 /**
  * @extends CompositeSpecification<string>
  */
-class UppercaseSpecification extends CompositeSpecification
+final class UppercaseSpecification extends CompositeSpecification
 {
     /**
-     * {@inheritDoc}
+     * @inheritDoc
      */
     public function isSatisfiedBy(mixed $candidate): bool
     {
-        return strtoupper($candidate) === $candidate;
+        return mb_strtoupper($candidate) === $candidate;
     }
 }

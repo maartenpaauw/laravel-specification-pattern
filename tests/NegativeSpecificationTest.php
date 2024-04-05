@@ -6,7 +6,12 @@ namespace Maartenpaauw\Specifications\Tests;
 
 use Workbench\App\NegativeSpecification;
 
-class NegativeSpecificationTest extends TestCase
+/**
+ * @internal
+ *
+ * @small
+ */
+final class NegativeSpecificationTest extends TestCase
 {
     private NegativeSpecification $specification;
 
@@ -17,8 +22,7 @@ class NegativeSpecificationTest extends TestCase
         $this->specification = new NegativeSpecification();
     }
 
-    /** @test */
-    public function it_should_return_false_for_all_candidates(): void
+    public function test_it_should_return_false_for_all_candidates(): void
     {
         // Act
         $satisfied = $this->specification->isSatisfiedBy(null);

@@ -6,6 +6,4 @@ namespace Maartenpaauw\Specifications;
 
 use DomainException;
 
-final class DissatisfiedSpecification extends DomainException
-{
-}
+final class DissatisfiedSpecification extends DomainException {}

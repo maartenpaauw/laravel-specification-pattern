@@ -7,7 +7,12 @@ namespace Maartenpaauw\Specifications\Tests;
 use Maartenpaauw\Specifications\NotSpecification;
 use Workbench\App\UppercaseSpecification;
 
-class NotSpecificationTest extends TestCase
+/**
+ * @internal
+ *
+ * @small
+ */
+final class NotSpecificationTest extends TestCase
 {
     /**
      * @var NotSpecification<string>
@@ -21,8 +26,7 @@ class NotSpecificationTest extends TestCase
         $this->specification = new NotSpecification(new UppercaseSpecification());
     }
 
-    /** @test */
-    public function it_should_return_false_when_the_given_specification_is_satisfied(): void
+    public function test_it_should_return_false_when_the_given_specification_is_satisfied(): void
     {
         // Act
         $satisfied = $this->specification->isSatisfiedBy('HELLO WORLD!');
@@ -31,8 +35,7 @@ class NotSpecificationTest extends TestCase
         $this->assertFalse($satisfied);
     }
 
-    /** @test */
-    public function it_should_return_true_when_the_given_specification_is_dissatisfied(): void
+    public function test_it_should_return_true_when_the_given_specification_is_dissatisfied(): void
     {
         // Act
         $satisfied = $this->specification->isSatisfiedBy('hello world!');

@@ -16,8 +16,7 @@ final class NotSpecification extends CompositeSpecification
      */
     public function __construct(
         private readonly Specification $specification,
-    ) {
-    }
+    ) {}
 
     public function isSatisfiedBy(mixed $candidate): bool
     {

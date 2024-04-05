@@ -8,9 +8,16 @@ use Maartenpaauw\Specifications\DissatisfiedSpecification;
 use Maartenpaauw\Specifications\VerboseSpecification;
 use Workbench\App\LengthSpecification;
 
-class VerboseSpecificationTest extends TestCase
+/**
+ * @internal
+ *
+ * @small
+ */
+final class VerboseSpecificationTest extends TestCase
 {
-    /** @var VerboseSpecification<string> */
+    /**
+     * @var VerboseSpecification<string>
+     */
     private VerboseSpecification $specification;
 
     protected function setUp(): void
@@ -22,8 +29,7 @@ class VerboseSpecificationTest extends TestCase
         );
     }
 
-    /** @test */
-    public function it_should_throw_an_exception_with_an_empty_message_when_the_specification_is_not_satisfied(): void
+    public function test_it_should_throw_an_exception_with_an_empty_message_when_the_specification_is_not_satisfied(): void
     {
         // Assert
         $this->expectException(DissatisfiedSpecification::class);
@@ -33,8 +39,7 @@ class VerboseSpecificationTest extends TestCase
         $this->specification->isSatisfiedBy('Hello Laravel!');
     }
 
-    /** @test */
-    public function it_should_be_possible_to_customize_the_exception_message(): void
+    public function test_it_should_be_possible_to_customize_the_exception_message(): void
     {
         // Assert
         $this->expectException(DissatisfiedSpecification::class);
@@ -46,8 +51,7 @@ class VerboseSpecificationTest extends TestCase
             ->isSatisfiedBy('Hello Laravel!');
     }
 
-    /** @test */
-    public function it_should_return_true_when_the_specification_is_satisfied_with_the_given_candidate(): void
+    public function test_it_should_return_true_when_the_specification_is_satisfied_with_the_given_candidate(): void
     {
         // Act
         $satisfied = $this->specification->isSatisfiedBy('Hello world!');
@@ -56,8 +60,7 @@ class VerboseSpecificationTest extends TestCase
         $this->assertTrue($satisfied);
     }
 
-    /** @test */
-    public function it_should_be_possible_to_receive_the_message(): void
+    public function test_it_should_be_possible_to_receive_the_message(): void
     {
         // Arrange
         $specification = $this->specification->withMessage('This is the reason why it is dissatisfied.');
@@ -66,6 +69,6 @@ class VerboseSpecificationTest extends TestCase
         $message = $specification->message();
 
         // Assert
-        $this->assertEquals('This is the reason why it is dissatisfied.', $message);
+        $this->assertSame('This is the reason why it is dissatisfied.', $message);
     }
 }

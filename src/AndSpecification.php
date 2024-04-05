@@ -16,8 +16,7 @@ final class AndSpecification extends CompositeSpecification
      */
     public function __construct(
         private readonly array $specifications,
-    ) {
-    }
+    ) {}
 
     public function isSatisfiedBy(mixed $candidate): bool
     {

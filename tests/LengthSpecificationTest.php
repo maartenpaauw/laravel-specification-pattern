@@ -6,7 +6,12 @@ namespace Maartenpaauw\Specifications\Tests;
 
 use Workbench\App\LengthSpecification;
 
-class LengthSpecificationTest extends TestCase
+/**
+ * @internal
+ *
+ * @small
+ */
+final class LengthSpecificationTest extends TestCase
 {
     private LengthSpecification $specification;
 
@@ -17,8 +22,7 @@ class LengthSpecificationTest extends TestCase
         $this->specification = new LengthSpecification(12);
     }
 
-    /** @test */
-    public function it_should_return_true_when_the_given_string_length_is_equals(): void
+    public function test_it_should_return_true_when_the_given_string_length_is_equals(): void
     {
         // Act
         $satisfied = $this->specification->isSatisfiedBy('Hello world!');
@@ -27,8 +31,7 @@ class LengthSpecificationTest extends TestCase
         $this->assertTrue($satisfied);
     }
 
-    /** @test */
-    public function it_should_return_false_when_the_given_string_does_not_match_the_given_length(): void
+    public function test_it_should_return_false_when_the_given_string_does_not_match_the_given_length(): void
     {
         // Act
         $satisfied = $this->specification->isSatisfiedBy('Hello Laravel!');

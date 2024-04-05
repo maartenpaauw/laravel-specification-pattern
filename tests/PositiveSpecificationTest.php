@@ -6,7 +6,12 @@ namespace Maartenpaauw\Specifications\Tests;
 
 use Workbench\App\PositiveSpecification;
 
-class PositiveSpecificationTest extends TestCase
+/**
+ * @internal
+ *
+ * @small
+ */
+final class PositiveSpecificationTest extends TestCase
 {
     private PositiveSpecification $specification;
 
@@ -17,8 +22,7 @@ class PositiveSpecificationTest extends TestCase
         $this->specification = new PositiveSpecification();
     }
 
-    /** @test */
-    public function it_should_return_true_for_all_candidates(): void
+    public function test_it_should_return_true_for_all_candidates(): void
     {
         // Act
         $satisfied = $this->specification->isSatisfiedBy(null);

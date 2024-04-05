@@ -33,7 +33,7 @@ final class MakeSpecificationCommand extends GeneratorCommand
     }
 
     /**
-     * {@inheritDoc}
+     * @inheritDoc
      */
     protected function getDefaultNamespace(mixed $rootNamespace): string
     {
@@ -41,7 +41,7 @@ final class MakeSpecificationCommand extends GeneratorCommand
     }
 
     /**
-     * {@inheritDoc}
+     * @inheritDoc
      */
     protected function buildClass(mixed $name): string
     {
@@ -85,7 +85,7 @@ final class MakeSpecificationCommand extends GeneratorCommand
     protected function resolveStubPath(string $stub): string
     {
         $custom = $this->laravel->basePath(trim($stub, '/'));
-        $default = __DIR__ . $stub;
+        $default = __DIR__.$stub;
 
         return file_exists($custom) ? $custom : $default;
     }

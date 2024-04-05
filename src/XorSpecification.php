@@ -16,8 +16,7 @@ final class XorSpecification extends CompositeSpecification
      */
     public function __construct(
         private readonly array $specifications,
-    ) {
-    }
+    ) {}
 
     public function isSatisfiedBy(mixed $candidate): bool
     {
@@ -26,6 +25,6 @@ final class XorSpecification extends CompositeSpecification
             static fn (Specification $specification): bool => $specification->isSatisfiedBy($candidate),
         );
 
-        return count($satisfiedSpecifications) === 1;
+        return \count($satisfiedSpecifications) === 1;
     }
 }

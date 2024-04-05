@@ -8,7 +8,12 @@ use Maartenpaauw\Specifications\VerboseSpecification;
 use Workbench\App\NegativeSpecification;
 use Workbench\App\PositiveSpecification;
 
-class CompositeSpecificationTest extends TestCase
+/**
+ * @internal
+ *
+ * @small
+ */
+final class CompositeSpecificationTest extends TestCase
 {
     private PositiveSpecification $specification;
 
@@ -19,8 +24,7 @@ class CompositeSpecificationTest extends TestCase
         $this->specification = new PositiveSpecification();
     }
 
-    /** @test */
-    public function it_should_return_false_when_inverting_the_specification(): void
+    public function test_it_should_return_false_when_inverting_the_specification(): void
     {
         // Act
         $satisfied = $this->specification
@@ -31,8 +35,7 @@ class CompositeSpecificationTest extends TestCase
         $this->assertFalse($satisfied);
     }
 
-    /** @test */
-    public function it_should_return_true_when_chaining_the_specification_twice(): void
+    public function test_it_should_return_true_when_chaining_the_specification_twice(): void
     {
         // Act
         $satisfied = $this->specification
@@ -44,8 +47,7 @@ class CompositeSpecificationTest extends TestCase
         $this->assertTrue($satisfied);
     }
 
-    /** @test */
-    public function it_should_return_true_when_chaining_a_satisfied_and_a_dissatisfied_or_specification(): void
+    public function test_it_should_return_true_when_chaining_a_satisfied_and_a_dissatisfied_or_specification(): void
     {
         // Act
         $satisfied = $this->specification
@@ -57,8 +59,7 @@ class CompositeSpecificationTest extends TestCase
         $this->assertTrue($satisfied);
     }
 
-    /** @test */
-    public function it_should_return_true_when_combining_an_inverting_not_method_with_a_satisfied_or_specification(): void
+    public function test_it_should_return_true_when_combining_an_inverting_not_method_with_a_satisfied_or_specification(): void
     {
         // Act
         $satisfied = $this->specification
@@ -70,8 +71,7 @@ class CompositeSpecificationTest extends TestCase
         $this->assertTrue($satisfied);
     }
 
-    /** @test */
-    public function it_should_be_possible_to_chain_the_or_not_specification(): void
+    public function test_it_should_be_possible_to_chain_the_or_not_specification(): void
     {
         // Act
         $satisfied = (new NegativeSpecification())
@@ -82,8 +82,7 @@ class CompositeSpecificationTest extends TestCase
         $this->assertTrue($satisfied);
     }
 
-    /** @test */
-    public function it_should_be_possible_to_chain_the_xor_specification(): void
+    public function test_it_should_be_possible_to_chain_the_xor_specification(): void
     {
         // Act
         $satisfied = $this->specification
@@ -94,8 +93,7 @@ class CompositeSpecificationTest extends TestCase
         $this->assertTrue($satisfied);
     }
 
-    /** @test */
-    public function it_should_be_possible_to_chain_the_xor_not_specification(): void
+    public function test_it_should_be_possible_to_chain_the_xor_not_specification(): void
     {
         // Act
         $satisfied = $this->specification
@@ -106,8 +104,7 @@ class CompositeSpecificationTest extends TestCase
         $this->assertFalse($satisfied);
     }
 
-    /** @test */
-    public function it_should_return_true_when_chaining_multiple_satisfied_and_specifications(): void
+    public function test_it_should_return_true_when_chaining_multiple_satisfied_and_specifications(): void
     {
         // Act
         $satisfied = $this->specification
@@ -120,8 +117,7 @@ class CompositeSpecificationTest extends TestCase
         $this->assertTrue($satisfied);
     }
 
-    /** @test */
-    public function it_should_be_possible_to_chain_the_and_not_specification(): void
+    public function test_it_should_be_possible_to_chain_the_and_not_specification(): void
     {
         // Act
         $satisfied = $this->specification
@@ -132,10 +128,7 @@ class CompositeSpecificationTest extends TestCase
         $this->assertTrue($satisfied);
     }
 
-    /**
-     * @test
-     */
-    public function it_should_make_the_specification_verbose(): void
+    public function test_it_should_make_the_specification_verbose(): void
     {
         // Act
         $specification = $this->specification

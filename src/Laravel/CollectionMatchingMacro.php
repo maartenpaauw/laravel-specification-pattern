@@ -18,12 +18,8 @@ final class CollectionMatchingMacro
 {
     public function __invoke(): Closure
     {
-        return function (Specification $specification) {
-            return $this->filter(
-                static function (mixed $candidate) use ($specification): bool {
-                    return $specification->isSatisfiedBy($candidate);
-                },
-            );
-        };
+        return fn (Specification $specification) => $this->filter(
+            static fn (mixed $candidate): bool => $specification->isSatisfiedBy($candidate),
+        );
     }
 }

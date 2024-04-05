@@ -16,8 +16,7 @@ final class OrSpecification extends CompositeSpecification
      */
     public function __construct(
         private readonly array $specifications,
-    ) {
-    }
+    ) {}
 
     public function isSatisfiedBy(mixed $candidate): bool
     {

@@ -7,10 +7,14 @@ namespace Maartenpaauw\Specifications\Tests;
 use Illuminate\Support\Collection;
 use Workbench\App\UppercaseSpecification;
 
-class CollectionTest extends TestCase
+/**
+ * @internal
+ *
+ * @small
+ */
+final class CollectionTest extends TestCase
 {
-    /** @test */
-    public function it_should_filter_the_collection_based_on_the_given_specification(): void
+    public function test_it_should_filter_the_collection_based_on_the_given_specification(): void
     {
         // Arrange
         $collection = new Collection([

@@ -9,10 +9,10 @@ use Maartenpaauw\Specifications\CompositeSpecification;
 /**
  * @extends CompositeSpecification<mixed>
  */
-class NegativeSpecification extends CompositeSpecification
+final class NegativeSpecification extends CompositeSpecification
 {
     /**
-     * {@inheritDoc}
+     * @inheritDoc
      */
     public function isSatisfiedBy(mixed $candidate): bool
     {

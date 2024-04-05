@@ -9,6 +9,11 @@ use PHPUnit\Framework\TestCase;
 use Workbench\App\LengthSpecification;
 use Workbench\App\UppercaseSpecification;
 
+/**
+ * @internal
+ *
+ * @small
+ */
 final class XorSpecificationTest extends TestCase
 {
     /**
@@ -26,8 +31,7 @@ final class XorSpecificationTest extends TestCase
         ]);
     }
 
-    /** @test */
-    public function it_should_only_return_true_when_one_specification_is_satisfied(): void
+    public function test_it_should_only_return_true_when_one_specification_is_satisfied(): void
     {
         $this->assertTrue($this->specification->isSatisfiedBy('HELLO'));
         $this->assertTrue($this->specification->isSatisfiedBy('hello world!'));
