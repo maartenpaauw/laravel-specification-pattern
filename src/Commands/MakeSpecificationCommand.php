@@ -61,24 +61,20 @@ final class MakeSpecificationCommand extends GeneratorCommand
      */
     protected function getOptions(): array
     {
-        $composite = new InputOption(
-            'composite',
-            null,
-            InputOption::VALUE_NONE,
-            'Indicates the specification should be composite',
-        );
-
-        $candidate = new InputOption(
-            'candidate',
-            'c',
-            InputOption::VALUE_OPTIONAL,
-            'Specify the candidate type to use',
-            'mixed',
-        );
-
         return [
-            $composite,
-            $candidate,
+            new InputOption(
+                'composite',
+                null,
+                InputOption::VALUE_NONE,
+                'Indicates the specification should be composite',
+            ),
+            new InputOption(
+                'candidate',
+                'c',
+                InputOption::VALUE_OPTIONAL,
+                'Specify the candidate type to use',
+                'mixed',
+            ),
         ];
     }
 
