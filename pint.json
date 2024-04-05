@@ -1,6 +1,7 @@
 {
     "preset": "psr12",
     "exclude": ["tests/Commands/__snapshots__/files"],
+    "notName": ["MakeSpecificationCommand.php"],
     "rules": {
         "align_multiline_comment": true,
         "array_indentation": true,
