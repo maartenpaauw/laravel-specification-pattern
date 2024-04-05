@@ -14,7 +14,7 @@ abstract class CompositeSpecification implements Specification
     /**
      * @return CompositeSpecification<TCandidate>
      */
-    public function not(): self
+    final public function not(): self
     {
         return new NotSpecification($this);
     }
@@ -24,7 +24,7 @@ abstract class CompositeSpecification implements Specification
      *
      * @return CompositeSpecification<TCandidate>
      */
-    public function or(Specification $specification): self
+    final public function or(Specification $specification): self
     {
         return new OrSpecification([$this, $specification]);
     }
@@ -34,7 +34,7 @@ abstract class CompositeSpecification implements Specification
      *
      * @return CompositeSpecification<TCandidate>
      */
-    public function orNot(Specification $specification): self
+    final public function orNot(Specification $specification): self
     {
         return $this->or(new NotSpecification($specification));
     }
@@ -44,7 +44,7 @@ abstract class CompositeSpecification implements Specification
      *
      * @return CompositeSpecification<TCandidate>
      */
-    public function xor(Specification $specification): self
+    final public function xor(Specification $specification): self
     {
         return new XorSpecification([$this, $specification]);
     }
@@ -54,7 +54,7 @@ abstract class CompositeSpecification implements Specification
      *
      * @return CompositeSpecification<TCandidate>
      */
-    public function xorNot(Specification $specification): self
+    final public function xorNot(Specification $specification): self
     {
         return $this->xor(new NotSpecification($specification));
     }
@@ -64,7 +64,7 @@ abstract class CompositeSpecification implements Specification
      *
      * @return CompositeSpecification<TCandidate>
      */
-    public function and(Specification $specification): self
+    final public function and(Specification $specification): self
     {
         return new AndSpecification([$this, $specification]);
     }
@@ -74,7 +74,7 @@ abstract class CompositeSpecification implements Specification
      *
      * @return CompositeSpecification<TCandidate>
      */
-    public function andNot(Specification $specification): self
+    final public function andNot(Specification $specification): self
     {
         return $this->and(new NotSpecification($specification));
     }
@@ -82,7 +82,7 @@ abstract class CompositeSpecification implements Specification
     /**
      * @return CompositeSpecification<TCandidate>
      */
-    public function verbose(string $message = ''): self
+    final public function verbose(string $message = ''): self
     {
         return new VerboseSpecification($this, $message);
     }
