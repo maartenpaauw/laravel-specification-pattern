@@ -8,6 +8,7 @@ All notable changes to `laravel-specification-pattern` will be documented in thi
 
 - Ability to make specification verbose using composite specification.
 - Exclusive or specification.
+- `HasSpecifications` trait.
 
 ## [v2.2.0] - 2024-03-13
 
