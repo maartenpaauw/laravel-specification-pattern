@@ -2,9 +2,9 @@
 
 All notable changes to `laravel-specification-pattern` will be documented in this file.
 
-## Unreleased
+## [v2.3.0] - 2024-04-06
 
- ### Added
+### Added
 
 - Ability to make specification verbose using composite specification.
 - Exclusive or specification.
@@ -57,6 +57,8 @@ All notable changes to `laravel-specification-pattern` will be documented in thi
 
 - initial release
 
+[v2.3.0]: https://github.com/maartenpaauw/laravel-specification-pattern/compare/v2.2.0...v2.3.0
+[v2.2.0]: https://github.com/maartenpaauw/laravel-specification-pattern/compare/v2.1.0...v2.2.0
 [v2.1.0]: https://github.com/maartenpaauw/laravel-specification-pattern/compare/v2.0.0...v2.1.0
 [v2.0.0]: https://github.com/maartenpaauw/laravel-specification-pattern/compare/v1.1.0...v2.0.0
 [v1.1.0]: https://github.com/maartenpaauw/laravel-specification-pattern/compare/v1.0.0...v1.1.0
