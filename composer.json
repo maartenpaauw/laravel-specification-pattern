@@ -19,7 +19,8 @@
         "php": "^8.1",
         "illuminate/console": "^10.0|^11.0",
         "illuminate/support": "^10.0|^11.0",
-        "spatie/laravel-package-tools": "^1.16.2"
+        "spatie/laravel-package-tools": "^1.16.2",
+        "symfony/polyfill-php83": "^1.30"
     },
     "require-dev": {
         "illuminate/testing": "^10.0|^11.0",

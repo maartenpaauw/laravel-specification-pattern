@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Maartenpaauw\Specifications;
 
+use Override;
+
 /**
  * @template TCandidate
  *
@@ -18,6 +20,7 @@ final class NotSpecification extends CompositeSpecification
         private readonly Specification $specification,
     ) {}
 
+    #[Override]
     public function isSatisfiedBy(mixed $candidate): bool
     {
         return ! $this->specification->isSatisfiedBy($candidate);

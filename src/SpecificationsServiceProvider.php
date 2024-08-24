@@ -7,11 +7,13 @@ namespace Maartenpaauw\Specifications;
 use Illuminate\Support\Collection;
 use Maartenpaauw\Specifications\Commands\MakeSpecificationCommand;
 use Maartenpaauw\Specifications\Laravel\CollectionMatchingMacro;
+use Override;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 final class SpecificationsServiceProvider extends PackageServiceProvider
 {
+    #[Override]
     public function configurePackage(Package $package): void
     {
         $package
@@ -20,6 +22,7 @@ final class SpecificationsServiceProvider extends PackageServiceProvider
             ->hasCommand(MakeSpecificationCommand::class);
     }
 
+    #[Override]
     public function packageRegistered(): void
     {
         /** @var string $method */

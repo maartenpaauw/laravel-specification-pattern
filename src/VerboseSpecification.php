@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Maartenpaauw\Specifications;
 
+use Override;
+
 /**
  * @template TCandidate
  *
@@ -40,6 +42,7 @@ final class VerboseSpecification extends CompositeSpecification
      *
      * @throws DissatisfiedSpecification
      */
+    #[Override]
     public function isSatisfiedBy(mixed $candidate): bool
     {
         if ($this->origin->isSatisfiedBy($candidate)) {

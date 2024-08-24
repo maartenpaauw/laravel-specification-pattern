@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Maartenpaauw\Specifications;
 
+use Override;
+
 /**
  * @template TCandidate
  *
@@ -18,6 +20,7 @@ final class XorSpecification extends CompositeSpecification
         private readonly array $specifications,
     ) {}
 
+    #[Override]
     public function isSatisfiedBy(mixed $candidate): bool
     {
         $satisfiedSpecifications = array_filter(
