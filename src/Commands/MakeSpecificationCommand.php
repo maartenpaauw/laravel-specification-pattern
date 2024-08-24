@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Maartenpaauw\Specifications\Commands;
 
 use Illuminate\Console\GeneratorCommand;
+use Override;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Input\InputOption;
 
@@ -19,6 +20,7 @@ final class MakeSpecificationCommand extends GeneratorCommand
      */
     protected $type = 'Specification';
 
+    #[Override]
     protected function getStub(): string
     {
         if ($this->option('composite')) {
@@ -35,6 +37,7 @@ final class MakeSpecificationCommand extends GeneratorCommand
     /**
      * @inheritDoc
      */
+    #[Override]
     protected function getDefaultNamespace(mixed $rootNamespace): string
     {
         return sprintf('%s\Specifications', $rootNamespace);
@@ -43,6 +46,7 @@ final class MakeSpecificationCommand extends GeneratorCommand
     /**
      * @inheritDoc
      */
+    #[Override]
     protected function buildClass(mixed $name): string
     {
         $replacements = [
@@ -59,6 +63,7 @@ final class MakeSpecificationCommand extends GeneratorCommand
     /**
      * @return array<int, InputOption>
      */
+    #[Override]
     protected function getOptions(): array
     {
         return [

@@ -96,6 +96,6 @@ final class MakeSpecificationCommandTest extends TestCase
 
     protected function assertSpecificationMatchesSnapshot(string $name): void
     {
-        $this->assertMatchesFileSnapshot(app_path(sprintf('Specifications/%s.php', $name)));
+        $this->assertMatchesFileSnapshot(app_path(\sprintf('Specifications/%s.php', $name)));
     }
 }
