@@ -2,13 +2,9 @@ name: code-coverage
 
 on:
   push:
-    branches:
-      - develop
-      - main
+    branches: [main]
   pull_request:
-    branches:
-      - develop
-      - main
+    branches: [main]
 
 jobs:
   test:
