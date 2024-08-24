@@ -2,6 +2,12 @@
 
 All notable changes to `laravel-specification-pattern` will be documented in this file.
 
+## [v2.5.0] - 2024-08-24
+
+### Changed
+
+- Deprecate `meets` method in favor of `satisfies`.
+
 ## [v2.4.0] - 2024-08-24
 
 ### Added
@@ -64,6 +70,7 @@ All notable changes to `laravel-specification-pattern` will be documented in thi
 
 - initial release
 
+[v2.5.0]: https://github.com/maartenpaauw/laravel-specification-pattern/compare/v2.4.0...v2.5.0
 [v2.4.0]: https://github.com/maartenpaauw/laravel-specification-pattern/compare/v2.3.0...v2.4.0
 [v2.3.0]: https://github.com/maartenpaauw/laravel-specification-pattern/compare/v2.2.0...v2.3.0
 [v2.2.0]: https://github.com/maartenpaauw/laravel-specification-pattern/compare/v2.1.0...v2.2.0
