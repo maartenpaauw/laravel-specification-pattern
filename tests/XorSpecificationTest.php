@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Maartenpaauw\Specifications\Tests;
 
+use InvalidArgumentException;
 use Maartenpaauw\Specifications\XorSpecification;
 use PHPUnit\Framework\TestCase;
 use Workbench\App\LengthSpecification;
@@ -29,6 +30,14 @@ final class XorSpecificationTest extends TestCase
             new UppercaseSpecification(),
             new LengthSpecification(12),
         ]);
+    }
+
+    public function test_it_should_throw_an_invalid_argument_exception_when_the_specification_array_does_contain_invalid_data(): void
+    {
+        self::expectException(InvalidArgumentException::class);
+
+        // @phpstan-ignore-next-line
+        new XorSpecification(['invalid']);
     }
 
     public function test_it_should_only_return_true_when_one_specification_is_satisfied(): void

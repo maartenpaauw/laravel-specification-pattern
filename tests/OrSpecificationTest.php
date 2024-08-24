@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Maartenpaauw\Specifications\Tests;
 
+use InvalidArgumentException;
 use Maartenpaauw\Specifications\OrSpecification;
 use Workbench\App\LengthSpecification;
 use Workbench\App\UppercaseSpecification;
@@ -28,6 +29,14 @@ final class OrSpecificationTest extends TestCase
             new UppercaseSpecification(),
             new LengthSpecification(12),
         ]);
+    }
+
+    public function test_it_should_throw_an_invalid_argument_exception_when_the_specification_array_does_contain_invalid_data(): void
+    {
+        self::expectException(InvalidArgumentException::class);
+
+        // @phpstan-ignore-next-line
+        new OrSpecification(['invalid']);
     }
 
     public function test_it_should_return_true_when_the_candidate_matches_all_specifications(): void
