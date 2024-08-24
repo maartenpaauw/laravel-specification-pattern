@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Maartenpaauw\Specifications;
 
 use Override;
+use Webmozart\Assert\Assert;
 
 /**
  * @template TCandidate
@@ -18,7 +19,9 @@ final class OrSpecification extends CompositeSpecification
      */
     public function __construct(
         private readonly array $specifications,
-    ) {}
+    ) {
+        Assert::allIsInstanceOf($this->specifications, Specification::class);
+    }
 
     #[Override]
     public function isSatisfiedBy(mixed $candidate): bool
