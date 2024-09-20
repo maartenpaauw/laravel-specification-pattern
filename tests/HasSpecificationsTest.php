@@ -23,5 +23,8 @@ final class HasSpecificationsTest extends TestCase
         // Act + Assert
         $this->assertTrue($candidate->satisfies(new PositiveSpecification()));
         $this->assertFalse($candidate->satisfies(new NegativeSpecification()));
+
+        $this->assertFalse($candidate->dissatisfies(new PositiveSpecification()));
+        $this->assertTrue($candidate->dissatisfies(new NegativeSpecification()));
     }
 }
