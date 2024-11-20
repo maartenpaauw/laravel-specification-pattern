@@ -34,6 +34,7 @@ final class VerboseSpecificationTest extends TestCase
         // Assert
         $this->expectException(DissatisfiedSpecification::class);
         $this->expectExceptionMessage('');
+        $this->expectExceptionCode(0);
 
         // Act
         $this->specification->isSatisfiedBy('Hello Laravel!');
@@ -48,6 +49,18 @@ final class VerboseSpecificationTest extends TestCase
         // Act
         $this->specification
             ->withMessage('The given string is longer than 12 characters!')
+            ->isSatisfiedBy('Hello Laravel!');
+    }
+
+    public function test_it_should_be_possible_to_customize_the_exception_code(): void
+    {
+        // Assert
+        $this->expectException(DissatisfiedSpecification::class);
+        $this->expectExceptionCode(10);
+
+        // Act
+        $this->specification
+            ->withCode(10)
             ->isSatisfiedBy('Hello Laravel!');
     }
 
@@ -70,5 +83,17 @@ final class VerboseSpecificationTest extends TestCase
 
         // Assert
         $this->assertSame('This is the reason why it is dissatisfied.', $message);
+    }
+
+    public function test_it_should_be_possible_to_receive_the_code(): void
+    {
+        // Arrange
+        $specification = $this->specification->withCode(10);
+
+        // Act
+        $code = $specification->code();
+
+        // Assert
+        $this->assertSame(10, $code);
     }
 }

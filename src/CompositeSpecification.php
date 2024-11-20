@@ -82,8 +82,8 @@ abstract class CompositeSpecification implements Specification
     /**
      * @return CompositeSpecification<TCandidate>
      */
-    final public function verbose(string $message = ''): self
+    final public function verbose(string $message = '', int $code = 0): self
     {
-        return new VerboseSpecification($this, $message);
+        return new VerboseSpecification($this, $message, $code);
     }
 }

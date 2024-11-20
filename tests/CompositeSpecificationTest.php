@@ -132,10 +132,11 @@ final class CompositeSpecificationTest extends TestCase
     {
         // Act
         $specification = $this->specification
-            ->verbose('The specification is not satisfied');
+            ->verbose('The specification is not satisfied', 10);
 
         // Assert
         $this->assertInstanceOf(VerboseSpecification::class, $specification);
         $this->assertSame('The specification is not satisfied', $specification->message());
+        $this->assertSame(10, $specification->code());
     }
 }

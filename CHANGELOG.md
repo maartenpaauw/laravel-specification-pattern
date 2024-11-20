@@ -2,6 +2,12 @@
 
 All notable changes to `laravel-specification-pattern` will be documented in this file.
 
+## [v2.7.0] - 2024-11-20
+
+### Added
+
+- Support for custom exception code.
+
 ## [v2.6.0] - 2024-09-20
 
 ### Added
@@ -76,6 +82,7 @@ All notable changes to `laravel-specification-pattern` will be documented in thi
 
 - initial release
 
+[v2.7.0]: https://github.com/maartenpaauw/laravel-specification-pattern/compare/v2.6.0...v2.7.0
 [v2.6.0]: https://github.com/maartenpaauw/laravel-specification-pattern/compare/v2.5.0...v2.6.0
 [v2.5.0]: https://github.com/maartenpaauw/laravel-specification-pattern/compare/v2.4.0...v2.5.0
 [v2.4.0]: https://github.com/maartenpaauw/laravel-specification-pattern/compare/v2.3.0...v2.4.0
