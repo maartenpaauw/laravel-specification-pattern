@@ -19,6 +19,7 @@ final class VerboseSpecification extends CompositeSpecification
     public function __construct(
         private readonly Specification $origin,
         private readonly string $message = '',
+        private readonly int $code = 0,
     ) {}
 
     /**
@@ -29,12 +30,30 @@ final class VerboseSpecification extends CompositeSpecification
         return new self(
             $this->origin,
             $message,
+            $this->code,
+        );
+    }
+
+    /**
+     * @return VerboseSpecification<TCandidate>
+     */
+    public function withCode(int $code): self
+    {
+        return new self(
+            $this->origin,
+            $this->message,
+            $code,
         );
     }
 
     public function message(): string
     {
         return $this->message;
+    }
+
+    public function code(): int
+    {
+        return $this->code;
     }
 
     /**
@@ -49,6 +68,6 @@ final class VerboseSpecification extends CompositeSpecification
             return true;
         }
 
-        throw new DissatisfiedSpecification($this->message);
+        throw new DissatisfiedSpecification($this->message, $this->code);
     }
 }
