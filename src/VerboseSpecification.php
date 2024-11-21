@@ -57,7 +57,7 @@ final class VerboseSpecification extends CompositeSpecification
     }
 
     /**
-     * @param  TCandidate  $candidate
+     * @inheritDoc
      *
      * @throws DissatisfiedSpecification
      */
