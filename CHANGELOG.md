@@ -88,6 +88,7 @@ All notable changes to `laravel-specification-pattern` will be documented in thi
 
 - initial release
 
+[v2.8.0]: https://github.com/maartenpaauw/laravel-specification-pattern/compare/v2.7.0...v2.8.0
 [v2.7.0]: https://github.com/maartenpaauw/laravel-specification-pattern/compare/v2.6.0...v2.7.0
 [v2.6.0]: https://github.com/maartenpaauw/laravel-specification-pattern/compare/v2.5.0...v2.6.0
 [v2.5.0]: https://github.com/maartenpaauw/laravel-specification-pattern/compare/v2.4.0...v2.5.0
