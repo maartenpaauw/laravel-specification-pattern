@@ -2,6 +2,12 @@
 
 All notable changes to `laravel-specification-pattern` will be documented in this file.
 
+## [v2.8.0] - 2024-11-21
+
+### Added
+
+- Transformer to transform specification into Laravel authorization access responses.
+
 ## [v2.7.0] - 2024-11-20
 
 ### Added
