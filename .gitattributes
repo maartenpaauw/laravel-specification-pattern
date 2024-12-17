@@ -2,19 +2,20 @@
 # https://www.kernel.org/pub/software/scm/git/docs/gitattributes.html
 
 # Ignore all test and documentation with "export-ignore".
-/.github                export-ignore
+/.editorconfig          export-ignore
 /.gitattributes         export-ignore
+/.github                export-ignore
 /.gitignore             export-ignore
-/phpunit.xml.dist       export-ignore
+/.php_cs.dist.php       export-ignore
+/UPGRADING.md           export-ignore
 /art                    export-ignore
 /docs                   export-ignore
-/tests                  export-ignore
-/workbench              export-ignore
-/.editorconfig          export-ignore
-/.php_cs.dist.php       export-ignore
+/phpstan-baseline.neon  export-ignore
+/phpstan.neon.dist      export-ignore
+/phpunit.xml.dist       export-ignore
+/pint.json              export-ignore
 /psalm.xml              export-ignore
 /psalm.xml.dist         export-ignore
 /testbench.yaml         export-ignore
-/UPGRADING.md           export-ignore
-/phpstan.neon.dist      export-ignore
-/phpstan-baseline.neon  export-ignore
+/tests                  export-ignore
+/workbench              export-ignore
