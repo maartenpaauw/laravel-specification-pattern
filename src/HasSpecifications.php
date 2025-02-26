@@ -21,14 +21,4 @@ trait HasSpecifications
     {
         return (new NotSpecification($specification))->isSatisfiedBy($this);
     }
-
-    /**
-     * @deprecated use `satisfies()` instead
-     *
-     * @param Specification<self> $specification
-     */
-    public function meets(Specification $specification): bool
-    {
-        return $this->satisfies($specification);
-    }
 }
