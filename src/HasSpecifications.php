@@ -7,7 +7,7 @@ namespace Maartenpaauw\Specifications;
 trait HasSpecifications
 {
     /**
-     * @param Specification<self> $specification
+     * @param  Specification<self>  $specification
      */
     public function satisfies(Specification $specification): bool
     {
@@ -15,7 +15,7 @@ trait HasSpecifications
     }
 
     /**
-     * @param Specification<self> $specification
+     * @param  Specification<self>  $specification
      */
     public function dissatisfies(Specification $specification): bool
     {
