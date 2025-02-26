@@ -15,9 +15,6 @@ use Symfony\Component\Console\Input\InputOption;
 )]
 final class MakeSpecificationCommand extends GeneratorCommand
 {
-    /**
-     * @var string
-     */
     protected $type = 'Specification';
 
     #[Override]
@@ -40,7 +37,7 @@ final class MakeSpecificationCommand extends GeneratorCommand
     #[Override]
     protected function getDefaultNamespace(mixed $rootNamespace): string
     {
-        return sprintf('%s\Specifications', $rootNamespace);
+        return \sprintf('%s\Specifications', $rootNamespace);
     }
 
     /**
@@ -49,6 +46,7 @@ final class MakeSpecificationCommand extends GeneratorCommand
     #[Override]
     protected function buildClass(mixed $name): string
     {
+        /** @var array<string, string> $replacements */
         $replacements = [
             '{{ candidate }}' => $this->option('candidate'),
         ];
