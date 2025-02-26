@@ -2,6 +2,18 @@
 
 All notable changes to `laravel-specification-pattern` will be documented in this file.
 
+## [v3.0.0] - 2025-02-26
+
+### Added
+
+- Support for Laravel 12.
+
+### Removed
+
+- Deprecated `meets` method.
+- Support for Laravel 10.
+- Support for PHP 8.1.
+
 ## [v2.8.0] - 2024-11-21
 
 ### Added
@@ -88,6 +100,7 @@ All notable changes to `laravel-specification-pattern` will be documented in thi
 
 - initial release
 
+[v3.0.0]: https://github.com/maartenpaauw/laravel-specification-pattern/compare/v2.8.0...v3.0.0
 [v2.8.0]: https://github.com/maartenpaauw/laravel-specification-pattern/compare/v2.7.0...v2.8.0
 [v2.7.0]: https://github.com/maartenpaauw/laravel-specification-pattern/compare/v2.6.0...v2.7.0
 [v2.6.0]: https://github.com/maartenpaauw/laravel-specification-pattern/compare/v2.5.0...v2.6.0
