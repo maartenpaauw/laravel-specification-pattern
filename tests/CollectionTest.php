@@ -27,6 +27,7 @@ final class CollectionTest extends TestCase
         $result = $collection->matching(new UppercaseSpecification());
 
         // Assert
+        $this->assertInstanceOf(Collection::class, $result);
         $this->assertCount(1, $result);
     }
 }

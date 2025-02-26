@@ -8,7 +8,10 @@ parameters:
         - src
         - tests
     tmpDir: build/phpstan
-    checkOctaneCompatibility: true
     checkModelProperties: true
-    checkMissingIterableValueType: false
-
+    checkOctaneCompatibility: true
+    treatPhpDocTypesAsCertain: false
+    ignoreErrors:
+        -
+            identifier: trait.unused
+            path: src/HasSpecifications.php
