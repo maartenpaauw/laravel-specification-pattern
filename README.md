@@ -1,9 +1,9 @@
 # Laravel specification pattern
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/maartenpaauw/laravel-specification-pattern.svg?style=flat-square)](https://packagist.org/packages/maartenpaauw/laravel-specification-pattern)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/maartenpaauw/laravel-specification-pattern/run-tests.yml?branch=develop&label=tests&style=flat-square)](https://github.com/maartenpaauw/laravel-specification-pattern/actions?query=workflow%3Arun-tests+branch%3Adevelop)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/maartenpaauw/laravel-specification-pattern/fix-php-code-style-issues.yml?branch=develop&label=code%20style&style=flat-square)](https://github.com/maartenpaauw/laravel-specification-pattern/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Adevelop)
-[![Codecov](https://codecov.io/gh/maartenpaauw/laravel-specification-pattern/branch/develop/graph/badge.svg?token=YM9A0DUA4R)](https://codecov.io/gh/maartenpaauw/laravel-specification-pattern)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/maartenpaauw/laravel-specification-pattern/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/maartenpaauw/laravel-specification-pattern/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/maartenpaauw/laravel-specification-pattern/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/maartenpaauw/laravel-specification-pattern/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
+[![Codecov](https://codecov.io/gh/maartenpaauw/laravel-specification-pattern/branch/main/graph/badge.svg?token=YM9A0DUA4R)](https://codecov.io/gh/maartenpaauw/laravel-specification-pattern)
 [![Total Downloads](https://img.shields.io/packagist/dt/maartenpaauw/laravel-specification-pattern.svg?style=flat-square)](https://packagist.org/packages/maartenpaauw/laravel-specification-pattern)
 
 Filter an Illuminate collection with specifications.
