@@ -1,6 +1,6 @@
 {
     "name": "maartenpaauw/laravel-specification-pattern",
-    "description": "This is my package laravel-specification-pattern",
+    "description": "Filter an Illuminate collection with specifications",
     "keywords": [
         "maartenpaauw",
         "laravel",
