@@ -13,8 +13,6 @@ updates:
       - "composer"
     assignees:
       - "maartenpaauw"
-    reviewers:
-      - "maartenpaauw"
 
   - package-ecosystem: "github-actions"
     directory: "/"
@@ -27,6 +25,4 @@ updates:
       - "dependencies"
       - "github-actions"
     assignees:
-      - "maartenpaauw"
-    reviewers:
       - "maartenpaauw"
