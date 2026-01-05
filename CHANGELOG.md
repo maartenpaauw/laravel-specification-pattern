@@ -2,6 +2,13 @@
 
 All notable changes to `laravel-specification-pattern` will be documented in this file.
 
+## [v3.0.1] - 2026-01-05
+
+### Added
+
+- Support for Webmozart's Assert library version 2.
+- Support for PHP version 8.5.
+
 ## [v3.0.0] - 2025-02-26
 
 ### Added
@@ -100,6 +107,7 @@ All notable changes to `laravel-specification-pattern` will be documented in thi
 
 - initial release
 
+[v3.0.1]: https://github.com/maartenpaauw/laravel-specification-pattern/compare/v3.0.0...v3.0.1
 [v3.0.0]: https://github.com/maartenpaauw/laravel-specification-pattern/compare/v2.8.0...v3.0.0
 [v2.8.0]: https://github.com/maartenpaauw/laravel-specification-pattern/compare/v2.7.0...v2.8.0
 [v2.7.0]: https://github.com/maartenpaauw/laravel-specification-pattern/compare/v2.6.0...v2.7.0
