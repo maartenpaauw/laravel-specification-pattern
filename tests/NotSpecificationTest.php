@@ -5,13 +5,13 @@ declare(strict_types=1);
 namespace Maartenpaauw\Specifications\Tests;
 
 use Maartenpaauw\Specifications\NotSpecification;
+use PHPUnit\Framework\Attributes\Small;
 use Workbench\App\UppercaseSpecification;
 
 /**
  * @internal
- *
- * @small
  */
+#[Small]
 final class NotSpecificationTest extends TestCase
 {
     /**

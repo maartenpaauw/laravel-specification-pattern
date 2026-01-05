@@ -6,13 +6,13 @@ namespace Maartenpaauw\Specifications\Tests;
 
 use Maartenpaauw\Specifications\DissatisfiedSpecification;
 use Maartenpaauw\Specifications\VerboseSpecification;
+use PHPUnit\Framework\Attributes\Small;
 use Workbench\App\LengthSpecification;
 
 /**
  * @internal
- *
- * @small
  */
+#[Small]
 final class VerboseSpecificationTest extends TestCase
 {
     /**
