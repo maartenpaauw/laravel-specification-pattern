@@ -24,7 +24,7 @@ final class CollectionTest extends TestCase
         ]);
 
         // Act
-        $result = $collection->matching(new UppercaseSpecification());
+        $result = $collection->matching(new UppercaseSpecification()); // @phpstan-ignore-line method.notFound
 
         // Assert
         $this->assertInstanceOf(Collection::class, $result);
