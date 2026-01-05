@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Maartenpaauw\Specifications\Tests;
 
+use PHPUnit\Framework\Attributes\Small;
 use Workbench\App\PositiveSpecification;
 
 /**
  * @internal
- *
- * @small
  */
+#[Small]
 final class PositiveSpecificationTest extends TestCase
 {
     private PositiveSpecification $specification;

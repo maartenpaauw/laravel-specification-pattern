@@ -7,13 +7,13 @@ namespace Maartenpaauw\Specifications\Tests\Commands;
 use Illuminate\Testing\PendingCommand;
 use Maartenpaauw\Specifications\Commands\MakeSpecificationCommand;
 use Maartenpaauw\Specifications\Tests\TestCase;
+use PHPUnit\Framework\Attributes\Small;
 use Spatie\Snapshots\MatchesSnapshots;
 
 /**
  * @internal
- *
- * @small
  */
+#[Small]
 final class MakeSpecificationCommandTest extends TestCase
 {
     use MatchesSnapshots;

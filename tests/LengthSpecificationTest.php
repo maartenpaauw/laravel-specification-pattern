@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Maartenpaauw\Specifications\Tests;
 
+use PHPUnit\Framework\Attributes\Small;
 use Workbench\App\LengthSpecification;
 
 /**
  * @internal
- *
- * @small
  */
+#[Small]
 final class LengthSpecificationTest extends TestCase
 {
     private LengthSpecification $specification;

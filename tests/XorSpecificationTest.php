@@ -6,15 +6,15 @@ namespace Maartenpaauw\Specifications\Tests;
 
 use InvalidArgumentException;
 use Maartenpaauw\Specifications\XorSpecification;
+use PHPUnit\Framework\Attributes\Small;
 use PHPUnit\Framework\TestCase;
 use Workbench\App\LengthSpecification;
 use Workbench\App\UppercaseSpecification;
 
 /**
  * @internal
- *
- * @small
  */
+#[Small]
 final class XorSpecificationTest extends TestCase
 {
     /**

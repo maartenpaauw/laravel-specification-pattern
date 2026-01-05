@@ -7,14 +7,14 @@ namespace Maartenpaauw\Specifications\Tests\Laravel;
 use Maartenpaauw\Specifications\Laravel\AccessResponseTransformer;
 use Maartenpaauw\Specifications\Tests\TestCase;
 use Maartenpaauw\Specifications\VerboseSpecification;
+use PHPUnit\Framework\Attributes\Small;
 use Workbench\App\NegativeSpecification;
 use Workbench\App\PositiveSpecification;
 
 /**
  * @internal
- *
- * @small
  */
+#[Small]
 final class AccessResponseTransformerTest extends TestCase
 {
     public function test_transform(): void

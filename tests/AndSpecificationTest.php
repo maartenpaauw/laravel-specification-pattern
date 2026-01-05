@@ -6,14 +6,14 @@ namespace Maartenpaauw\Specifications\Tests;
 
 use InvalidArgumentException;
 use Maartenpaauw\Specifications\AndSpecification;
+use PHPUnit\Framework\Attributes\Small;
 use Workbench\App\LengthSpecification;
 use Workbench\App\UppercaseSpecification;
 
 /**
  * @internal
- *
- * @small
  */
+#[Small]
 final class AndSpecificationTest extends TestCase
 {
     /**

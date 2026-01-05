@@ -5,13 +5,13 @@ declare(strict_types=1);
 namespace Maartenpaauw\Specifications\Tests;
 
 use Illuminate\Support\Collection;
+use PHPUnit\Framework\Attributes\Small;
 use Workbench\App\UppercaseSpecification;
 
 /**
  * @internal
- *
- * @small
  */
+#[Small]
 final class CollectionTest extends TestCase
 {
     public function test_it_should_filter_the_collection_based_on_the_given_specification(): void

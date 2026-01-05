@@ -5,14 +5,14 @@ declare(strict_types=1);
 namespace Maartenpaauw\Specifications\Tests;
 
 use Maartenpaauw\Specifications\VerboseSpecification;
+use PHPUnit\Framework\Attributes\Small;
 use Workbench\App\NegativeSpecification;
 use Workbench\App\PositiveSpecification;
 
 /**
  * @internal
- *
- * @small
  */
+#[Small]
 final class CompositeSpecificationTest extends TestCase
 {
     private PositiveSpecification $specification;

@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Maartenpaauw\Specifications\Tests;
 
+use PHPUnit\Framework\Attributes\Small;
 use Workbench\App\UppercaseSpecification;
 
 /**
  * @internal
- *
- * @small
  */
+#[Small]
 final class UppercaseSpecificationTest extends TestCase
 {
     private UppercaseSpecification $specification;
