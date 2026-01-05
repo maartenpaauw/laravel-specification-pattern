@@ -11,7 +11,7 @@
     "authors": [
         {
             "name": "Maarten Paauw",
-            "email": "maartenpaauw@gmail.com",
+            "email": "maarten@paauw.dev",
             "role": "Developer"
         }
     ],
@@ -25,19 +25,18 @@
     },
     "require-dev": {
         "illuminate/testing": "^11.0|^12.0",
-        "larastan/larastan": "^2.9|^3.0",
-        "laravel/pint": "^1.0",
-        "nunomaduro/collision": "^v7.11|^8.1",
-        "orchestra/testbench": "^v9.11|^10.0",
-        "pestphp/pest": "^3.0",
-        "pestphp/pest-plugin-arch": "^v3.0",
-        "pestphp/pest-plugin-laravel": "^v2.4|^v3.0",
-        "pestphp/pest-plugin-type-coverage": "^3.0",
+        "larastan/larastan": "^3.8",
+        "laravel/pint": "^1.27",
+        "nunomaduro/collision": "^8.8",
+        "orchestra/testbench": "^9.15|^10.8",
+        "pestphp/pest": "^3.7|^4.1",
+        "pestphp/pest-plugin-arch": "^3.0|^4.0",
+        "pestphp/pest-plugin-laravel": "^3.1|^4.0",
+        "pestphp/pest-plugin-type-coverage": "^3.4|^4.0",
         "phpstan/extension-installer": "^1.4",
         "phpstan/phpstan-deprecation-rules": "^2.0",
         "phpstan/phpstan-phpunit": "^2.0",
-        "spatie/laravel-ray": "^1.35",
-        "spatie/phpunit-snapshot-assertions": "^5.1"
+        "spatie/phpunit-snapshot-assertions": "^5.2"
     },
     "autoload": {
         "psr-4": {
