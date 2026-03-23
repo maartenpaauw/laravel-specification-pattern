@@ -2,6 +2,16 @@
 
 All notable changes to `laravel-specification-pattern` will be documented in this file.
 
+## [v3.1.0] - 2026-03-23
+
+### Added
+
+- Support for Laravel 13.
+
+### Removed
+
+- Support for Laravel 11.
+
 ## [v3.0.1] - 2026-01-05
 
 ### Added
@@ -107,6 +117,7 @@ All notable changes to `laravel-specification-pattern` will be documented in thi
 
 - initial release
 
+[v3.1.0]: https://github.com/maartenpaauw/laravel-specification-pattern/compare/v3.0.1...v3.1.0
 [v3.0.1]: https://github.com/maartenpaauw/laravel-specification-pattern/compare/v3.0.0...v3.0.1
 [v3.0.0]: https://github.com/maartenpaauw/laravel-specification-pattern/compare/v2.8.0...v3.0.0
 [v2.8.0]: https://github.com/maartenpaauw/laravel-specification-pattern/compare/v2.7.0...v2.8.0
